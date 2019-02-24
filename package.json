@@ -2,17 +2,27 @@
   "name": "donnakevin.wedding",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "private": true,
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
-    "gulp": "^4.0.0",
-    "gulp-babel": "^8.0.0"
+    "@babel/register": "^7.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.0"
   },
   "scripts": {
+    "dev": "webpack-dev-server --hot --inline",
+    "build": "webpack --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "kevindew@me.com",
   "license": "MIT"
 }
