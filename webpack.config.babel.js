@@ -4,7 +4,7 @@ export default {
   entry: './src/js/main.js',
   output: {
     path: __dirname + '/dist',
-    filename: '[name].[contenthash].js',
+    filename: '[name].[hash].js',
   },
   plugins: [
     new HtmlWebpackPlugin({
