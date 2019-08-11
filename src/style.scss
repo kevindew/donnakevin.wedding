@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Love Potion';
+  src: url('fonts/love-potion-no-10.woff2') format('woff2'),
+       url('fonts/love-potion-no-10.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Love Potion';
+  background-color: yellow;
+}
