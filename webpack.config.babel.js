@@ -7,7 +7,7 @@ export default (_env, argv) => {
     entry: './src/main.js',
     output: {
       path: __dirname + '/dist',
-      filename: '[name].[contenthash].js',
+      filename: '[name].[hash].js',
     },
     module: {
       rules: [
