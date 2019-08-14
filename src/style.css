@@ -1,2 +1,8 @@
 @import 'tachyons';
 @import 'styles/fonts';
+
+.hero-image {
+  max-width: 500px;
+  margin: auto;
+  display: block;
+}
