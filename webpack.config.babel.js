@@ -12,13 +12,13 @@ export default (_env, argv) => {
     module: {
       rules: [
         {
-          test: /\.scss$/,
+          test: /\.css$/,
           use: [
             argv.mode == 'production'
              ? MiniCssExtractPlugin.loader
              : 'style-loader',
             'css-loader',
-            'sass-loader',
+            'postcss-loader',
           ],
         },
         {
