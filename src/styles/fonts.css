@@ -21,7 +21,3 @@
   src: url('fonts/titillium-web-v8-latin-600.woff2') format('woff2'),
        url('fonts/titillium-web-v8-latin-600.woff') format('woff');
 }
-
-body {
-  font-family: 'Titillium Web';
-}

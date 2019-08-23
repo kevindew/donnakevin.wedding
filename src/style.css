@@ -1,8 +1,68 @@
-@import 'tachyons';
+@import 'tachyons/src/tachyons';
 @import 'styles/fonts';
 
+.love-potion {
+  font-family: 'Love Potion', serif;
+  text-transform: uppercase;
+}
+
+.titillium-web {
+  font-family: 'Titillium Web', sans-serif;
+}
+
 .hero-image {
-  max-width: 500px;
+  width: 100%;
+  max-width: 24rem;
   margin: auto;
   display: block;
+}
+
+.wrapper {
+  margin: auto;
+  max-width: 48rem;
+}
+
+.wrapper--center {
+  text-align: center;
+  max-width: 32rem;
+}
+
+.pane {
+  padding: var(--spacing-medium);
+}
+
+.pane--sand {
+  background-color: yellow;
+}
+
+.form {
+  font-size: 1.125rem;
+}
+
+.form__fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 var(--spacing-medium) 0;
+}
+
+.form__label {
+  line-height: 1.5;
+  display: inline-block;
+  padding-top: var(--spacing-small);
+  padding-bottom: var(--spacing-small);
+}
+
+.form__input-text {
+  border: 1px solid green;
+  border-radius: 4px;
+  width: 24rem;
+  max-width: 100%;
+  padding: var(--spacing-small);
+}
+
+.form__button {
+  border: 1px solid green;
+  border-radius: 4px;
+  background-color: white;
+  padding: var(--spacing-small);
 }

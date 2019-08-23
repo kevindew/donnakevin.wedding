@@ -4,13 +4,152 @@
     <title>Donna &amp; Kevin's wedding</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body class="w-100">
-    <div class="w-100 pa3">
-      <img src="<%= require('./images/logo.png') %>"
-           alt="Donna Carter &amp; Kevin Dew - 28.03.20"
-           class="hero-image">
-    </div>
-    <div class="w-100 pa3">
-    </div>
+  <body class="titillium-web">
+    <header>
+      <div class="pane">
+        <div class="wrapper">
+          <h1 class="ma0">
+            <img src="<%= require('./images/logo.png') %>"
+                 alt="Donna Carter &amp; Kevin Dew - 28.03.20"
+                 class="hero-image">
+          </h1>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="pane pane--sand">
+        <div class="wrapper wrapper--center">
+          <img src="<%= require('./images/us.jpg') %>"
+               alt="Donna and Kevin at sea"
+               class="br-100 mt3 mw5">
+          <h2 class="love-potion f1">We’re getting married...</h2>
+          <p class="f4 lh-title mb3">
+            Finally! We are really looking forward to seeing you
+            all on our big day. To make life easy we have put this website
+            together so you can find all the information you might need.
+          </p>
+        </div>
+      </div>
+      <div class="pane">
+        <div class="wrapper">
+          <h2 class="love-potion f1">When</h2>
+          <time class="f4 lh-title">11am Saturday 28 March 2020</time>
+          <a href="#" class="link">
+            Add to calendar
+          </a>
+          <h2 class="love-potion f1">Where</h2>
+          <address class="f4 lh-title fs-normal">
+            Rudding Park
+            Harrogate
+            HG3 1JH
+          </address>
+          <a href="#" class="link">
+            See on map
+          </a>
+        </div>
+      </div>
+      <div class="pane pane--sand">
+        <div class="wrapper">
+          <h2 class="love-potion f1">How to get there</h2>
+          <h3 class="love-potion f2">By car</h3>
+          <h3 class="love-potion f2">By public transport</h3>
+          <h3 class="love-potion f2">Local Taxis</h3>
+        </div>
+      </div>
+      <div class="pane">
+        <div class="wrapper">
+          <h2 class="love-potion f1">Places to stay</h2>
+          <p>
+            Finally! We are really looking forward to seeing you all on our big
+            day. To make life easy we have put this website together so you can
+            find all the information you might need.
+          </p>
+        </div>
+      </div>
+      <div class="pane pane--sand">
+        <div class="wrapper">
+          <h2 class="love-potion f1">On the day</h2>
+          <p>
+            Finally! We are really looking forward to seeing you all on our big
+            day. To make life easy we have put this website together so you can
+            find all the information you might need.
+          </p>
+        </div>
+      </div>
+      <div class="pane" id="rsvp">
+        <div class="wrapper">
+          <h2 class="love-potion f1">RSVP</h2>
+          <form method="post" class="form">
+            <fieldset class="form__fieldset">
+              <div>
+                <label for="name" class="form__label">Who are you?</label>
+              </div>
+              <div>
+                <input type="text" name="name" id="name" class="form__input-text">
+              </div>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <div>
+                <label class="form__label">Are you attending?</label>
+              </div>
+              <div>
+                <label class="form__label">
+                  <input type="radio" name="attend" value="yes" checked>
+                  Yup, I'm ready to eat, drink, and see you get married!
+                </label>
+                <label class="form__label">
+                  <input type="radio" name="attend" value="no">
+                  Afraid not, will toast to you from afar.
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <div>
+                <label for="guests" class="form__label">Who is coming with you?</label>
+              </div>
+              <div>
+                <textarea type="text" name="guests" id="guests" class="form__input-text h4"></textarea>
+              </div>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <div>
+                <label for="dietary" class="form__label">Any dietary requirements?</label>
+              </div>
+              <div>
+                <textarea type="text" name="dietary" id="dietary" class="form__input-text h4"></textarea>
+              </div>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <div>
+                <label for="tune" class="form__label">Any song choices?</label>
+              </div>
+              <div>
+                <textarea type="text" name="tune" id="tune" class="form__input-text h4"></textarea>
+              </div>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <div>
+                <label for="comment" class="form__label">Anything else we should know?</label>
+              </div>
+              <div>
+                <textarea type="text" name="comment" id="comment" class="form__input-text h4"></textarea>
+              </div>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <button type="submit" class="form__button">Submit</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="pa3">
+      <div class="wrapper">
+        <p>Made with ❤️ by Donna and Kevin</p>
+        <ul>
+          <li><a href="mailto:help@donnakevin.wedding" class="link">Contact us</a></li>
+          <li><a href="https://github.com/kevindew/donnakevin.wedding" class="link">Source code</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
