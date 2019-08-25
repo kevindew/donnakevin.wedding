@@ -1,6 +1,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import { getPlugins } from 'tachyons-build-css';
 
 export default (_env, argv) => {
   return {
@@ -18,7 +19,12 @@ export default (_env, argv) => {
              ? MiniCssExtractPlugin.loader
              : 'style-loader',
             'css-loader',
-            'postcss-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: getPlugins()
+              }
+            }
           ],
         },
         {
