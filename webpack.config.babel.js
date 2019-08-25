@@ -35,6 +35,17 @@ export default (_env, argv) => {
           test: /\.woff2$/,
           use: ['url-loader'],
         },
+        {
+          test: /\.(ics)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[name].[ext]?[contenthash]'
+              }
+            }
+          ]
+        },
       ]
     },
     plugins: [
