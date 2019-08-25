@@ -1,6 +1,19 @@
 @import 'tachyons/src/tachyons';
 @import 'styles/fonts';
 
+:root {
+  --sand: #FBF6E2;
+  --sage-green: #C3D3C9;
+  --sage-green-rgb: 195, 211, 201;
+  --sage-green: rgb(var(--sage-green-rgb));
+  --forest-green-rgb: 112, 139, 96;
+  --forest-green: rgb(var(--forest-green-rgb));
+  --silver-grey: #D1D2D4;
+  --text-grey: #595d57;
+}
+
+.text-grey { color: var(--text-grey); }
+
 .love-potion {
   font-family: 'Love Potion', serif;
   text-transform: uppercase;
@@ -12,7 +25,7 @@
 
 .hero-image {
   width: 100%;
-  max-width: 24rem;
+  max-width: 32rem;
   margin: auto;
   display: block;
 }
@@ -22,17 +35,12 @@
   max-width: 48rem;
 }
 
-.wrapper--center {
-  text-align: center;
-  max-width: 32rem;
-}
-
 .pane {
   padding: var(--spacing-medium);
 }
 
 .pane--sand {
-  background-color: yellow;
+  background-color: var(--sand);
 }
 
 .form {
@@ -48,21 +56,56 @@
 .form__label {
   line-height: 1.5;
   display: inline-block;
+  font-weight: bold;
   padding-top: var(--spacing-small);
   padding-bottom: var(--spacing-small);
 }
 
-.form__input-text {
-  border: 1px solid green;
-  border-radius: 4px;
-  width: 24rem;
-  max-width: 100%;
-  padding: var(--spacing-small);
+.form__label--radio {
+  font-weight: normal;
 }
 
-.form__button {
-  border: 1px solid green;
-  border-radius: 4px;
-  background-color: white;
+.form__input-text {
+  border: 2px solid var(--forest-green);
+  border-radius: .5em;
+  max-width: 100%;
   padding: var(--spacing-small);
+  transition: box-shadow .15s ease-in-out;
+}
+
+.form__input-text:focus {
+  outline: 0;
+  box-shadow: 0 0 6px 2px rgba(var(--forest-green-rgb), .5);
+}
+
+.section-header {
+  @extend .love-potion;
+  @extend .f2;
+  @extend .f1-ns;
+}
+
+.button, .button:visited {
+  @extend .f5;
+  @extend .f4-ns;
+  border: 2px solid var(--forest-green);
+  color: var(--forest-green);
+  display: inline-block;
+  border-radius: .5rem;
+  background-color: white;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color .15s ease-in-out;
+  transition: background-color .15s ease-in-out;
+  transition: box-shadow .15s ease-in-out;
+}
+
+.button:hover, .button:focus {
+  color: white;
+  background-color: var(--forest-green);
+}
+
+.button:focus, .button:active {
+  outline: 0;
+  box-shadow: 0 0 6px 2px rgba(var(--forest-green-rgb), .5);
 }

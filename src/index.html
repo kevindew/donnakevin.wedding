@@ -4,7 +4,7 @@
     <title>Donna &amp; Kevin's wedding</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body class="titillium-web">
+  <body class="titillium-web text-grey">
     <header>
       <div class="pane">
         <div class="wrapper">
@@ -18,12 +18,12 @@
     </header>
     <main>
       <div class="pane pane--sand">
-        <div class="wrapper wrapper--center">
+        <div class="wrapper mw6">
           <img src="<%= require('./images/us.jpg') %>"
                alt="Donna and Kevin at sea"
-               class="br-100 mt3 mw5">
-          <h2 class="love-potion f1">We’re getting married...</h2>
-          <p class="f4 lh-title mb3">
+               class="br-100 mt3 mw5-ns mw4 db center">
+          <h2 class="section-header tc">We’re getting married...</h2>
+          <p class="f4-ns f5 lh-title mb3 tc-ns">
             Finally! We are really looking forward to seeing you
             all on our big day. To make life easy we have put this website
             together so you can find all the information you might need.
@@ -31,21 +31,32 @@
         </div>
       </div>
       <div class="pane">
-        <div class="wrapper">
-          <h2 class="love-potion f1">When</h2>
-          <time class="f4 lh-title">11am Saturday 28 March 2020</time>
-          <a href="#" class="link">
-            Add to calendar
-          </a>
-          <h2 class="love-potion f1">Where</h2>
-          <address class="f4 lh-title fs-normal">
-            Rudding Park
-            Harrogate
-            HG3 1JH
-          </address>
-          <a href="#" class="link">
-            See on map
-          </a>
+        <div class="wrapper flex items-start justify-around">
+          <div class="w-50 mw5 tc pa1">
+            <h2 class="section-header">When</h2>
+            <time class="f4-ns f5 lh-title db tc mb4"
+                  datetime="2020-03-28T11:00:00.000Z">
+              Saturday<br>
+              28 March 2020<br>
+              at 11:00 am
+            </time>
+            <a href="#" class="button center mb4">
+              Add to calendar
+            </a>
+          </div>
+          <div class="w-50 mw5 tc pa1">
+            <h2 class="section-header">Where</h2>
+            <address class="f4-ns f5 lh-title fs-normal db mb4">
+              Rudding Park<br>
+              Harrogate<br>
+              HG3 1JH
+            </address>
+            <a href="https://www.google.com/maps/place/Rudding+Park/@53.9735165,-1.494559,12z/data=!4m8!3m7!1s0x4879519a142cdf57:0xcdaaafbf8e064753!5m2!4m1!1i2!8m2!3d53.9735134!4d-1.4923703"
+               class="button center mb4"
+               target="_blank">
+              See on map
+            </a>
+          </div>
         </div>
       </div>
       <div class="pane pane--sand">
@@ -93,11 +104,11 @@
                 <label class="form__label">Are you attending?</label>
               </div>
               <div>
-                <label class="form__label">
+                <label class="form__label form__label--radio">
                   <input type="radio" name="attend" value="yes" checked>
                   Yup, I'm ready to eat, drink, and see you get married!
                 </label>
-                <label class="form__label">
+                <label class="form__label form__label--radio">
                   <input type="radio" name="attend" value="no">
                   Afraid not, will toast to you from afar.
                 </label>
@@ -136,7 +147,7 @@
               </div>
             </fieldset>
             <fieldset class="form__fieldset">
-              <button type="submit" class="form__button">Submit</button>
+              <button type="submit" class="button">Submit</button>
             </fieldset>
           </form>
         </div>
