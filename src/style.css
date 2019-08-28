@@ -2,7 +2,7 @@
 @import 'styles/fonts';
 
 :root {
-  --sand: #FBF6E2;
+  --sand: #fbf6e2;
   --pale-green-rgb: 243, 244, 238;
   --pale-green: rgb(var(--pale-green-rgb));
   --sage-green-rgb: 195, 211, 201;
@@ -11,7 +11,7 @@
   --muted-sage-green: rgb(var(--muted-sage-green-rgb));
   --forest-green-rgb: 112, 139, 96;
   --forest-green: rgb(var(--forest-green-rgb));
-  --silver-grey: #D1D2D4;
+  --silver-grey: #d1d2d4;
   --earth-brown: #624a36;
   --text-grey: #595d57;
 }
@@ -27,22 +27,25 @@
   font-family: 'Titillium Web', sans-serif;
 }
 
-.link:link, .link:visited {
+.link:link,
+.link:visited {
   color: var(--forest-green);
-  transition: background-color .15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
 }
 
 .link:hover {
   color: var(--earth-brown);
 }
 
-.link:focus, .link:active {
+.link:focus,
+.link:active {
   outline: 0;
   background-color: var(--forest-green);
   color: white;
 }
 
-.link:hover:focus, .link:hover:active {
+.link:hover:focus,
+.link:hover:active {
   background-color: var(--earth-brown);
 }
 
@@ -95,15 +98,15 @@
 
 .form__input-text {
   border: 2px solid var(--forest-green);
-  border-radius: .5em;
+  border-radius: 0.5em;
   width: 100%;
   padding: var(--spacing-small);
-  transition: box-shadow .15s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out;
 }
 
 .form__input-text:focus {
   outline: 0;
-  box-shadow: 0 0 6px 2px rgba(var(--forest-green-rgb), .5);
+  box-shadow: 0 0 6px 2px rgba(var(--forest-green-rgb), 0.5);
 }
 
 .section-header {
@@ -112,30 +115,33 @@
   @extend .f1-ns;
 }
 
-.button, .button:visited {
+.button,
+.button:visited {
   @extend .f5;
   @extend .f4-ns;
+
   border: 2px solid var(--forest-green);
   color: var(--forest-green);
   display: inline-block;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background-color: white;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   cursor: pointer;
-  transition: color .15s ease-in-out;
-  transition: background-color .15s ease-in-out;
-  transition: box-shadow .15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out;
 }
 
-.button:hover, .button:focus {
+.button:hover,
+.button:focus {
   color: white;
   background-color: var(--forest-green);
 }
 
 .button:focus {
   outline: 0;
-  box-shadow: 0 0 6px 2px rgba(var(--forest-green-rgb), .5);
+  box-shadow: 0 0 6px 2px rgba(var(--forest-green-rgb), 0.5);
 }
 
 .footer-links {
@@ -146,6 +152,7 @@
 
 .footer-links__item {
   @extend .mv1;
+
   padding: 0;
 }
 
