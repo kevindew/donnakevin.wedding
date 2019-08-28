@@ -159,3 +159,19 @@
     margin-left: 1rem;
   }
 }
+
+.page-nav {
+  position: fixed;
+  right: 0;
+}
+
+.page-nav__nav {
+  display: none;
+}
+
+@media screen and (min-width: 48em) {
+  .page-nav {
+    right: 50%;
+    transform: translateX(24rem);
+  }
+}

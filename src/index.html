@@ -8,6 +8,51 @@
     <header>
       <div class="pane">
         <div class="wrapper">
+          <div class="page-nav">
+            <a href="#nav" class="page-nav__trigger">
+              <span>Menu icon</span>
+              <span class="clip">Menu</span>
+            </a>
+            <nav id="nav" class="page-nav__nav">
+              <ul class="page-nav__list">
+                <li class="page-nav__item">
+                  <a href="#when-where" class="page-nav__link">
+                    When / Where
+                  </a>
+                </li>
+                <li class="page-nav__item">
+                  <a href="#how-to-get-there" class="page-nav__link">
+                    How to get there
+                  </a>
+                </li>
+                <li class="page-nav__item">
+                  <a href="#places-to-stay" class="page-nav__link">
+                    Places to stay
+                  </a>
+                </li>
+                <li class="page-nav__item">
+                  <a href="#on-the-day" class="page-nav__link">
+                    On the day
+                  </a>
+                </li>
+                <li class="page-nav__item">
+                  <a href="#gifts" class="page-nav__link">
+                    Gifts
+                  </a>
+                </li>
+                <li class="page-nav__item">
+                  <a href="#rsvp" class="page-nav__link">
+                    RSVP
+                  </a>
+                </li>
+                <li class="page-nav__item">
+                  <a href="mailto:help@donnakevin.wedding" class="page-nav__link">
+                    Contact us
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
           <h1 class="ma0">
             <img src="<%= require('./images/logo.png') %>"
                  alt="Donna Carter &amp; Kevin Dew - 28.03.20"
@@ -30,7 +75,7 @@
           </p>
         </div>
       </div>
-      <div class="pane">
+      <div class="pane" id="when-where">
         <div class="wrapper flex items-start justify-around">
           <div class="w-50 mw5 tc pa1">
             <h2 class="section-header">When</h2>
@@ -60,7 +105,7 @@
           </div>
         </div>
       </div>
-      <div class="pane pane--muted-sage-green">
+      <div class="pane pane--muted-sage-green" id="how-to-get-there">
         <div class="wrapper">
           <h2 class="love-potion f1">How to get there</h2>
           <h3 class="love-potion f2">By car</h3>
@@ -87,7 +132,7 @@
           <h3 class="love-potion f2">Local Taxis</h3>
         </div>
       </div>
-      <div class="pane">
+      <div class="pane" id="places-to-stay">
         <div class="wrapper">
           <h2 class="love-potion f1">Places to stay</h2>
           <p>
@@ -97,7 +142,7 @@
           </p>
         </div>
       </div>
-      <div class="pane pane--pale-green">
+      <div class="pane pane--pale-green" id="on-the-day">
         <div class="wrapper">
           <h2 class="love-potion f1">On the day</h2>
           <p>
@@ -107,7 +152,7 @@
           </p>
         </div>
       </div>
-      <div class="pane">
+      <div class="pane" id="gifts">
         <div class="wrapper">
           <h2 class="love-potion f1">Gifts</h2>
           <p>
