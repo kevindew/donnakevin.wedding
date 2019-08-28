@@ -3,9 +3,12 @@
 
 :root {
   --sand: #FBF6E2;
-  --sage-green: #C3D3C9;
+  --pale-green-rgb: 243, 244, 238;
+  --pale-green: rgb(var(--pale-green-rgb));
   --sage-green-rgb: 195, 211, 201;
   --sage-green: rgb(var(--sage-green-rgb));
+  --muted-sage-green-rgb: 221, 231, 223;
+  --muted-sage-green: rgb(var(--muted-sage-green-rgb));
   --forest-green-rgb: 112, 139, 96;
   --forest-green: rgb(var(--forest-green-rgb));
   --silver-grey: #D1D2D4;
@@ -59,8 +62,12 @@
   padding: var(--spacing-medium);
 }
 
-.pane--sand {
-  background-color: var(--sand);
+.pane--pale-green {
+  background-color: var(--pale-green);
+}
+
+.pane--muted-sage-green {
+  background-color: var(--muted-sage-green);
 }
 
 .form {
