@@ -1,5 +1,7 @@
 # donnakevin.wedding
 
+[![Build Status](https://travis-ci.org/kevindew/donnakevin.wedding.svg?branch=master)](https://travis-ci.org/kevindew/donnakevin.wedding)
+
 Wedding website for the marriage of
 [Donna Carter](https://github.com/donnacarter) and
 [Kevin Dew](https://github.com/kevindew) which is due to
