@@ -1,7 +1,9 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
-import { getPlugins } from 'tachyons-build-css';
+import postcssImport from 'postcss-import';
+import postcssExtend from 'postcss-extend';
+import postcssPresetEnv from 'postcss-preset-env';
 
 export default (_env, argv) => {
   return {
@@ -22,7 +24,12 @@ export default (_env, argv) => {
             {
               loader: 'postcss-loader',
               options: {
-                plugins: getPlugins()
+                ident: 'postcss',
+                plugins: () => [
+                  postcssImport(),
+                  postcssExtend(),
+                  postcssPresetEnv({ stage: 1, preserve: false })
+                ]
               }
             }
           ],

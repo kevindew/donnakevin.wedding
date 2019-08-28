@@ -8,6 +8,7 @@
       "@babel/preset-env"
     ]
   },
+  "browserslist": "> 0.25%, not dead",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -18,10 +19,12 @@
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
     "style-loader": "^1.0.0",
     "tachyons": "^4.10.0",
-    "tachyons-build-css": "^1.8.1",
     "url-loader": "^2.1.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
