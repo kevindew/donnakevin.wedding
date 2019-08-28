@@ -1,25 +1,26 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { CleanWebpackPlugin } from 'clean-webpack-plugin';
-import postcssImport from 'postcss-import';
-import postcssExtend from 'postcss-extend';
-import postcssPresetEnv from 'postcss-preset-env';
+import path from 'path'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
+import postcssImport from 'postcss-import'
+import postcssExtend from 'postcss-extend'
+import postcssPresetEnv from 'postcss-preset-env'
 
 export default (_env, argv) => {
   return {
     entry: './src/main.js',
     output: {
-      path: __dirname + '/dist',
-      filename: '[name].[hash].js',
+      path: path.join(__dirname, '/dist'),
+      filename: '[name].[hash].js'
     },
     module: {
       rules: [
         {
           test: /\.css$/,
           use: [
-            argv.mode == 'production'
-             ? MiniCssExtractPlugin.loader
-             : 'style-loader',
+            argv.mode === 'production'
+              ? MiniCssExtractPlugin.loader
+              : 'style-loader',
             'css-loader',
             {
               loader: 'postcss-loader',
@@ -32,15 +33,15 @@ export default (_env, argv) => {
                 ]
               }
             }
-          ],
+          ]
         },
         {
           test: /\.(png|svg|jpg|gif|woff)$/,
-          use: ['file-loader'],
+          use: ['file-loader']
         },
         {
           test: /\.woff2$/,
-          use: ['url-loader'],
+          use: ['url-loader']
         },
         {
           test: /\.(ics)$/,
@@ -52,21 +53,21 @@ export default (_env, argv) => {
               }
             }
           ]
-        },
+        }
       ]
     },
     plugins: [
       new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({
-        filename: '[name].[contenthash].css',
+        filename: '[name].[contenthash].css'
       }),
       new HtmlWebpackPlugin({
         template: './src/index.html',
         minify: {
           collapseWhitespace: true,
-          removeComments: true,
+          removeComments: true
         }
-      }),
+      })
     ]
-  };
-};
+  }
+}
