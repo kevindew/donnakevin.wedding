@@ -1331,7 +1331,7 @@ img { max-width: 100%; }
 
 .br4 {        border-radius: 1rem; }
 
-.br-100 {     border-radius: 100%; }
+.br-100, .image-highlight__image {     border-radius: 100%; }
 
 .br-pill {    border-radius: 9999px; }
 
@@ -2817,7 +2817,7 @@ code, .code {
 
 .mw3  {  max-width: 4rem; }
 
-.mw4  {  max-width: 8rem; }
+.mw4, .image-highlight__image  {  max-width: 8rem; }
 
 .mw5  {  max-width: 16rem; }
 
@@ -5199,7 +5199,7 @@ code, .code {
 
 .f2, .section-header { font-size: 2.25rem; }
 
-.f3, .icon-guide__header { font-size: 1.5rem; }
+.f3, .icon-guide__header, .image-highlight__title { font-size: 1.5rem; }
 
 .f4 { font-size: 1.25rem; }
 
@@ -5215,7 +5215,7 @@ code, .code {
   .f-6-ns, .f-headline-ns { font-size: 6rem; }
   .f-5-ns, .f-subheadline-ns { font-size: 5rem; }
   .f1-ns, .section-header { font-size: 3rem; }
-  .f2-ns, .icon-guide__header { font-size: 2.25rem; }
+  .f2-ns, .icon-guide__header, .image-highlight__title { font-size: 2.25rem; }
   .f3-ns { font-size: 1.5rem; }
   .f4-ns, .section-copy, .button, .button:visited { font-size: 1.25rem; }
   .f5-ns { font-size: 1rem; }
@@ -5984,7 +5984,7 @@ code, .code {
 
 .text-grey { color: #595d57; }
 
-.love-potion, .section-header, .icon-guide__title {
+.love-potion, .section-header, .icon-guide__title, .image-highlight__title {
   font-family: 'Love Potion', serif;
   text-transform: uppercase;
 }
@@ -6185,5 +6185,9 @@ code, .code {
   .icon-guide__body {
     margin-left: 2rem;
   }
+}
+
+.image-highlight__image-container {
+  text-align: center;
 }
 
