@@ -112,8 +112,8 @@
 
 .section-header {
   @extend .love-potion;
-  @extend .f2;
-  @extend .f1-ns;
+  @extend .f1;
+  @extend .lh-title;
 }
 
 .section-copy {
@@ -217,23 +217,11 @@
 }
 
 .icon-guide__header {
-  @extend .f3;
-  @extend .f2-ns;
   @extend .mv4;
   @extend .w-third-ns;
-<<<<<<< HEAD
-}
-
-@media (--breakpoint-not-small) {
-  .icon-guide__header {
-    text-align: center;
-    margin-right: var(--spacing-large);
-  }
-=======
   @extend .f2;
   @extend .tc-ns;
   @extend .mr4-ns;
->>>>>>> d2def59... fixup! Basic places to stay prototype
 }
 
 .icon-guide__title {
@@ -241,6 +229,7 @@
   @extend .ma0;
   @extend .ml2;
   @extend .dib;
+  @extend .f2;
 }
 
 @media (--breakpoint-not-small) {
