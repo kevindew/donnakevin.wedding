@@ -116,6 +116,13 @@
   @extend .f1-ns;
 }
 
+.section-copy {
+  @extend .lh-copy;
+  @extend .f5;
+  @extend .f4-ns;
+  @extend .fs-normal;
+}
+
 .button,
 .button:visited {
   @extend .f5;
@@ -201,5 +208,55 @@
   .page-nav {
     right: 50%;
     transform: translateX(24rem);
+  }
+}
+
+.icon-guide {
+  @extend .flex-ns;
+  @extend .mb4-ns;
+}
+
+.icon-guide__header {
+  @extend .f3;
+  @extend .f2-ns;
+  @extend .mv4;
+  @extend .w-third-ns;
+}
+
+@media (--breakpoint-not-small) {
+  .icon-guide__header {
+    text-align: center;
+    margin-right: var(--spacing-large);
+  }
+}
+
+.icon-guide__title {
+  @extend .love-potion;
+  @extend .ma0;
+  @extend .ml2;
+  @extend .dib;
+}
+
+@media (--breakpoint-not-small) {
+  .icon-guide__title {
+    margin-left: 0;
+    display: block;
+  }
+}
+
+@media (--breakpoint-not-small) {
+  .icon-guide__icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-medium);
+  }
+}
+
+.icon-guide__body {
+  @extend .w-two-thirds-ns;
+}
+
+@media (--breakpoint-not-small) {
+  .icon-guide__body {
+    margin-left: var(--spacing-large);
   }
 }
