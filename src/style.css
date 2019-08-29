@@ -221,6 +221,7 @@
   @extend .f2-ns;
   @extend .mv4;
   @extend .w-third-ns;
+<<<<<<< HEAD
 }
 
 @media (--breakpoint-not-small) {
@@ -228,6 +229,11 @@
     text-align: center;
     margin-right: var(--spacing-large);
   }
+=======
+  @extend .f2;
+  @extend .tc-ns;
+  @extend .mr4-ns;
+>>>>>>> d2def59... fixup! Basic places to stay prototype
 }
 
 .icon-guide__title {
@@ -253,10 +259,34 @@
 
 .icon-guide__body {
   @extend .w-two-thirds-ns;
+  @extend .ml4-ns;
 }
 
-@media (--breakpoint-not-small) {
-  .icon-guide__body {
-    margin-left: var(--spacing-large);
-  }
+.image-highlight {
+  @extend .flex-ns;
+}
+
+.image-highlight__image-container {
+  @extend .w-third-ns;
+  @extend .mr4-ns;
+
+  text-align: center;
+}
+
+.image-highlight__image {
+  @extend .br-100;
+
+  max-width: 12rem;
+}
+
+.image-highlight__copy-container {
+  @extend .w-two-thirds-ns;
+  @extend .ml4-ns;
+}
+
+.image-highlight__title {
+  @extend .love-potion;
+  @extend .f2;
+  @extend .mv4;
+  @extend .mt0-ns;
 }
