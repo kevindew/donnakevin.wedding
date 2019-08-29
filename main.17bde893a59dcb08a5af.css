@@ -2060,7 +2060,7 @@ img { max-width: 100%; }
 .flex-shrink-1 { flex-shrink: 1; }
 
 @media screen and (min-width: 30em) {
-  .flex-ns, .icon-guide { display: -webkit-box; display: flex; }
+  .flex-ns, .icon-guide, .image-highlight { display: -webkit-box; display: flex; }
   .inline-flex-ns { display: -webkit-inline-box; display: inline-flex; }
   .flex-auto-ns {
     -webkit-box-flex: 1;
@@ -2709,7 +2709,7 @@ code, .code {
 
 .lh-solid { line-height: 1; }
 
-.lh-title { line-height: 1.25; }
+.lh-title, .section-header { line-height: 1.25; }
 
 .lh-copy, .section-copy  { line-height: 1.5; }
 
@@ -2817,7 +2817,7 @@ code, .code {
 
 .mw3  {  max-width: 4rem; }
 
-.mw4, .image-highlight__image  {  max-width: 8rem; }
+.mw4  {  max-width: 8rem; }
 
 .mw5  {  max-width: 16rem; }
 
@@ -2989,8 +2989,8 @@ code, .code {
   .w-80-ns { width:  80%; }
   .w-90-ns { width:  90%; }
   .w-100-ns { width: 100%; }
-  .w-third-ns, .icon-guide__header { width: calc(100% / 3); }
-  .w-two-thirds-ns, .icon-guide__body { width: calc(100% / 1.5); }
+  .w-third-ns, .icon-guide__header, .image-highlight__image-container { width: calc(100% / 3); }
+  .w-two-thirds-ns, .icon-guide__body, .image-highlight__copy-container { width: calc(100% / 1.5); }
   .w-auto-ns { width: auto; }
 }
 
@@ -4022,7 +4022,7 @@ code, .code {
   margin-bottom: 1rem;
 }
 
-.mv4, .icon-guide__header   {
+.mv4, .icon-guide__header, .image-highlight__title   {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -4206,7 +4206,7 @@ code, .code {
   .ml1-ns {  margin-left: .25rem; }
   .ml2-ns  {  margin-left: .5rem; }
   .ml3-ns  {  margin-left: 1rem; }
-  .ml4-ns  {  margin-left: 2rem; }
+  .ml4-ns, .icon-guide__body, .image-highlight__copy-container  {  margin-left: 2rem; }
   .ml5-ns  {  margin-left: 4rem; }
   .ml6-ns {  margin-left: 8rem; }
   .ml7-ns { margin-left: 16rem; }
@@ -4215,7 +4215,7 @@ code, .code {
   .mr1-ns {  margin-right: .25rem; }
   .mr2-ns  {  margin-right: .5rem; }
   .mr3-ns  {  margin-right: 1rem; }
-  .mr4-ns  {  margin-right: 2rem; }
+  .mr4-ns, .icon-guide__header, .image-highlight__image-container  {  margin-right: 2rem; }
   .mr5-ns  {  margin-right: 4rem; }
   .mr6-ns {  margin-right: 8rem; }
   .mr7-ns { margin-right: 16rem; }
@@ -4229,7 +4229,7 @@ code, .code {
   .mb6-ns {  margin-bottom: 8rem; }
   .mb7-ns { margin-bottom: 16rem; }
 
-  .mt0-ns  {  margin-top: 0; }
+  .mt0-ns, .image-highlight__title  {  margin-top: 0; }
   .mt1-ns {  margin-top: .25rem; }
   .mt2-ns  {  margin-top: .5rem; }
   .mt3-ns  {  margin-top: 1rem; }
@@ -5087,7 +5087,7 @@ code, .code {
 @media screen and (min-width: 30em) {
   .tl-ns  { text-align: left; }
   .tr-ns  { text-align: right; }
-  .tc-ns  { text-align: center; }
+  .tc-ns, .icon-guide__header  { text-align: center; }
   .tj-ns  { text-align: justify; }
 }
 
@@ -5195,11 +5195,11 @@ code, .code {
 
 /* Type Scale */
 
-.f1 { font-size: 3rem; }
+.f1, .section-header { font-size: 3rem; }
 
-.f2, .section-header { font-size: 2.25rem; }
+.f2, .icon-guide__header, .icon-guide__title, .image-highlight__title { font-size: 2.25rem; }
 
-.f3, .icon-guide__header, .image-highlight__title { font-size: 1.5rem; }
+.f3 { font-size: 1.5rem; }
 
 .f4 { font-size: 1.25rem; }
 
@@ -5214,8 +5214,8 @@ code, .code {
 @media screen and (min-width: 30em){
   .f-6-ns, .f-headline-ns { font-size: 6rem; }
   .f-5-ns, .f-subheadline-ns { font-size: 5rem; }
-  .f1-ns, .section-header { font-size: 3rem; }
-  .f2-ns, .icon-guide__header, .image-highlight__title { font-size: 2.25rem; }
+  .f1-ns { font-size: 3rem; }
+  .f2-ns { font-size: 2.25rem; }
   .f3-ns { font-size: 1.5rem; }
   .f4-ns, .section-copy, .button, .button:visited { font-size: 1.25rem; }
   .f5-ns { font-size: 1rem; }
@@ -6161,13 +6161,6 @@ code, .code {
 }
 
 @media screen and (min-width: 30em) {
-  .icon-guide__header {
-    text-align: center;
-    margin-right: 2rem;
-  }
-}
-
-@media screen and (min-width: 30em) {
   .icon-guide__title {
     margin-left: 0;
     display: block;
@@ -6181,13 +6174,13 @@ code, .code {
   }
 }
 
-@media screen and (min-width: 30em) {
-  .icon-guide__body {
-    margin-left: 2rem;
-  }
+.image-highlight__image-container {
+
+  text-align: center;
 }
 
-.image-highlight__image-container {
-  text-align: center;
+.image-highlight__image {
+
+  max-width: 12rem;
 }
 
