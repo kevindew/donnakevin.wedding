@@ -6046,6 +6046,15 @@ code, .code {
   background: white url(2e0b1665948ef418d7546ee909113ec1.jpg) center center;
 }
 
+@media screen and (min-width: 30em) {
+  .pane--leaves-gate {
+    background-color: white;
+    background-image: url(5f1fa4b830b7e1cf3ac18a6b1b4093b4.jpg), url(5f484d303566fcf56e877c60ab617ab0.jpg);
+    background-position: left, right;
+    background-repeat: no-repeat;
+  }
+}
+
 .leaves-foreground {
   background-color: rgba(255, 255, 255, 0.9);
 }
