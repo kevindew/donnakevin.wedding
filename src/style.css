@@ -253,6 +253,7 @@
 
 .image-highlight {
   @extend .flex-ns;
+  @extend .mb5;
 }
 
 .image-highlight__image-container {
