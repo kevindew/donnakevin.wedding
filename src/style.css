@@ -302,3 +302,39 @@
   @extend .mv4;
   @extend .mt0-ns;
 }
+
+.timeline-entry {
+  @extend .mv5;
+  @extend .flex-ns;
+}
+
+.timeline-entry__header {
+  @extend .love-potion;
+  @extend .ma0;
+  @extend .f2;
+  @extend .w-third-ns;
+  @extend .tc-ns;
+  @extend .mr4-ns;
+}
+
+.timeline-entry__copy {
+  @extend .section-copy;
+  @extend .w-two-thirds-ns;
+  @extend .ml4-ns;
+  @extend .mv0-ns;
+}
+
+.timeline-entry__time {
+  @extend .db-ns;
+  @extend .f1-ns;
+}
+
+.timeline-entry__time::after {
+  content: " - ";
+}
+
+@media (--breakpoint-not-small) {
+  .timeline-entry__time::after {
+    content: "";
+  }
+}
