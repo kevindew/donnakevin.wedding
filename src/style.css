@@ -66,12 +66,25 @@
   padding: var(--spacing-medium);
 }
 
+.pane--forest-green {
+  background-color: var(--forest-green);
+  color: white;
+}
+
 .pane--pale-green {
   background-color: var(--pale-green);
 }
 
 .pane--muted-sage-green {
   background-color: var(--muted-sage-green);
+}
+
+.pane--leaves {
+  background: white url(images/leaves.jpg) center center;
+}
+
+.leaves-foreground {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .form {
