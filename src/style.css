@@ -83,6 +83,15 @@
   background: white url(images/leaves.jpg) center center;
 }
 
+@media (--breakpoint-not-small) {
+  .pane--leaves-gate {
+    background-color: white;
+    background-image: url(images/leaves-left.jpg), url(images/leaves-right.jpg);
+    background-position: left, right;
+    background-repeat: no-repeat;
+  }
+}
+
 .leaves-foreground {
   background-color: rgba(255, 255, 255, 0.9);
 }
