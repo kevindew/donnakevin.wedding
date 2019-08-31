@@ -1,10 +1,12 @@
-import path from 'path'
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import { CleanWebpackPlugin } from 'clean-webpack-plugin'
+import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin'
+import path from 'path'
 import postcssImport from 'postcss-import'
 import postcssExtend from 'postcss-extend'
 import postcssPresetEnv from 'postcss-preset-env'
+import TerserJsPlugin from 'terser-webpack-plugin'
 
 export default (_env, argv) => {
   return {
@@ -36,12 +38,8 @@ export default (_env, argv) => {
           ]
         },
         {
-          test: /\.(png|svg|jpg|gif|woff)$/,
+          test: /\.(png|svg|jpg|gif|woff|woff2)$/,
           use: ['file-loader']
-        },
-        {
-          test: /\.woff2$/,
-          use: ['url-loader']
         },
         {
           test: /\.(ics)$/,
@@ -55,6 +53,9 @@ export default (_env, argv) => {
           ]
         }
       ]
+    },
+    optimization: {
+      minimizer: [new TerserJsPlugin({}), new OptimizeCssAssetsPlugin({})]
     },
     plugins: [
       new CleanWebpackPlugin(),
