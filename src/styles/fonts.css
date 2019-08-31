@@ -2,7 +2,7 @@
   font-family: 'Love Potion';
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: block;
   src:
     url('fonts/love-potion-no-10.woff2') format('woff2'),
     url('fonts/love-potion-no-10.woff') format('woff');
@@ -12,7 +12,7 @@
   font-family: 'Titillium Web';
   font-style: normal;
   font-weight: normal;
-  font-display: fallback;
+  font-display: block;
   src:
     url('fonts/titillium-web-v8-latin-300.woff2') format('woff2'),
     url('fonts/titillium-web-v8-latin-300.woff') format('woff');
@@ -22,7 +22,7 @@
   font-family: 'Titillium Web';
   font-style: normal;
   font-weight: 600;
-  font-display: fallback;
+  font-display: block;
   src:
     url('fonts/titillium-web-v8-latin-600.woff2') format('woff2'),
     url('fonts/titillium-web-v8-latin-600.woff') format('woff');
