@@ -17,6 +17,23 @@
   --text-grey: #595d57;
 }
 
+@media (--breakpoint-large) {
+  body {
+    background-color: white;
+    background-image:
+      url(images/leaves-left.jpg),
+      url(images/leaves-right.jpg),
+      url(images/leaves-left.jpg),
+      url(images/leaves-right.jpg);
+    background-position:
+      left -254px,
+      right -254px,
+      left calc(100% + 254px),
+      right calc(100% + 254px);
+    background-repeat: no-repeat;
+  }
+}
+
 .text-grey { color: var(--text-grey); }
 
 .love-potion {
@@ -101,9 +118,22 @@
 }
 
 .form__fieldset {
+  @extend .ma0;
+  @extend .mb4;
+
   border: 0;
   padding: 0;
-  margin: 0 0 var(--spacing-medium) 0;
+}
+
+.form__info {
+  @extend .w-third-ns;
+  @extend .mr4-ns;
+  @extend .tr-ns;
+}
+
+.form__field {
+  @extend .w-two-thirds-ns;
+  @extend .ml4-ns;
 }
 
 .form__label {

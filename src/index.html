@@ -155,9 +155,12 @@ svgCore.library.add(icons.fas)
             </div>
             <div class="icon-guide__body">
               <p class="section-copy">
-                Finally! We are really looking forward to seeing you all on our big
-                day. To make life easy we have put this website together so you can
-                find all the information you might need.
+                There are no public transport links to the venue itself from
+                Harrogate or Pannal so we strongly suggest that you pre-book
+                your taxi for the day/evening in advance. We have been
+                recommended Blue Line taxis, to book please call
+                <a href="tel:01423530830" class="link">01423 530830</a>.
+                They usually cost around £10 each way.
               </p>
             </div>
           </div>
@@ -176,8 +179,19 @@ svgCore.library.add(icons.fas)
             <div class="image-highlight__copy-container">
               <h3 class="image-highlight__title">Rudding Park</h3>
               <p class="section-copy">
-                Stay with us at Rudding Park Hotel &amp; Spa (01423 844822)
-                and relax with a Spa or a round of Golf.
+                Stay with us at Rudding Park Hotel &amp; Spa and take advantage
+                of the on-site golf and Spa facilities, find out more about the
+                venue at
+                <a href="https://www.ruddingpark.co.uk" class="link">
+                  ruddingpark.co.uk
+                </a>
+                The rooms here are slightly on the more expensive side but it
+                is ultra convenient and you will be able to have breakfast with
+                us the morning after the big day - if you haven’t had enough of
+                us that is! Let us know if you decide to stay here so we can
+                organise a private room for breakfasts. Rooms here start from
+                around £217 (though you can get slightly cheaper if you book
+                last minute) and are available to book now.
               </p>
             </div>
           </div>
@@ -191,8 +205,12 @@ svgCore.library.add(icons.fas)
             <div class="image-highlight__copy-container">
               <h3 class="image-highlight__title">Premier Inn Harrogate South</h3>
               <p class="section-copy">
-                Stay with us at Rudding Park Hotel &amp; Spa (01423 844822)
-                and relax with a Spa or a round of Golf.
+                There is a Premier Inn 10 minutes away by car which is perfect
+                to stay at if you are driving and don’t want to stay at the
+                venue or drive through the centre of Harrogate. Everyone knows
+                what to expect with a Premier Inn and they do great breakfasts
+                too. You can expect rooms here to cost around £54 a night and
+                are available to book now.
               </p>
             </div>
           </div>
@@ -206,8 +224,21 @@ svgCore.library.add(icons.fas)
             <div class="image-highlight__copy-container">
               <h3 class="image-highlight__title">Harrogate Town Centre</h3>
               <p class="section-copy">
-                Stay with us at Rudding Park Hotel &amp; Spa (01423 844822)
-                and relax with a Spa or a round of Golf.
+                If you are travelling by train or would prefer more of a city
+                break then staying in the centre of Harrogate would be the
+                perfect option. If you have never travelled to the north
+                before then Harrogate is a real treat! It is a picturesque
+                town full of lovely shops and places to eat - including the
+                famous Betty’s Tea Rooms. Harrogate has a heritage as a
+                fashionable spa town so there’s lots to see and do, find out
+                more here
+                <a href="https://www.visitharrogate.co.uk" class="link">
+                  visitharrogate.co.uk
+                </a>. There are lots of hotel and Airbnb options available
+                and it’s probably best to start your search here
+                <a href="https://www.booking.com" class="link">
+                  booking.com
+                </a>.
               </p>
             </div>
           </div>
@@ -326,65 +357,85 @@ svgCore.library.add(icons.fas)
       </div>
       <div class="pane" id="rsvp">
         <div class="wrapper">
-          <h2 class="love-potion f1">RSVP</h2>
+          <h2 class="section-header tc">RSVP</h2>
+          <p class="section-copy tc mb5">
+            Please let us know if you can attend by the 31st October 2019.
+          </p>
           <form method="post" class="form">
             <fieldset class="form__fieldset">
-              <div>
-                <label for="name" class="form__label">Who are you?</label>
-              </div>
-              <div>
-                <input type="text" name="name" id="name" class="form__input-text">
-              </div>
-            </fieldset>
-            <fieldset class="form__fieldset">
-              <div>
-                <label class="form__label">Are you attending?</label>
-              </div>
-              <div>
-                <label class="form__label form__label--radio">
-                  <input type="radio" name="attend" value="yes" checked>
-                  Yup, I'm ready to eat, drink, and see you get married!
-                </label>
-                <label class="form__label form__label--radio">
-                  <input type="radio" name="attend" value="no">
-                  Afraid not, will toast to you from afar.
-                </label>
+              <div class="flex-ns">
+                <div class="form__info">
+                  <label for="name" class="form__label">Who are you?</label>
+                </div>
+                <div class="form__field">
+                  <input type="text" name="name" id="name" class="form__input-text">
+                </div>
               </div>
             </fieldset>
             <fieldset class="form__fieldset">
-              <div>
-                <label for="guests" class="form__label">Who is coming with you?</label>
-              </div>
-              <div>
-                <textarea type="text" name="guests" id="guests" class="form__input-text h4"></textarea>
-              </div>
-            </fieldset>
-            <fieldset class="form__fieldset">
-              <div>
-                <label for="dietary" class="form__label">Any dietary requirements?</label>
-              </div>
-              <div>
-                <textarea type="text" name="dietary" id="dietary" class="form__input-text h4"></textarea>
-              </div>
-            </fieldset>
-            <fieldset class="form__fieldset">
-              <div>
-                <label for="tune" class="form__label">Any song choices?</label>
-              </div>
-              <div>
-                <textarea type="text" name="tune" id="tune" class="form__input-text h4"></textarea>
+              <div class="flex-ns">
+                <div class="form__info">
+                  <label class="form__label">Are you attending?</label>
+                </div>
+                <div class="form__field">
+                  <label class="form__label form__label--radio">
+                    <input type="radio" name="attend" value="yes" checked>
+                    Yup, I'm ready to eat, drink, and see you get married!
+                  </label>
+                  <label class="form__label form__label--radio">
+                    <input type="radio" name="attend" value="no">
+                    Afraid not, I will toast to you from afar.
+                  </label>
+                </div>
               </div>
             </fieldset>
             <fieldset class="form__fieldset">
-              <div>
-                <label for="comment" class="form__label">Anything else we should know?</label>
-              </div>
-              <div>
-                <textarea type="text" name="comment" id="comment" class="form__input-text h4"></textarea>
+              <div class="flex-ns">
+                <div class="form__info">
+                  <label for="guests" class="form__label">Who is coming with you?</label>
+                </div>
+                <div class="form__field">
+                  <textarea type="text" name="guests" id="guests" class="form__input-text h4"></textarea>
+                </div>
               </div>
             </fieldset>
             <fieldset class="form__fieldset">
-              <button type="submit" class="button">Submit</button>
+              <div class="flex-ns">
+                <div class="form__info">
+                  <label for="dietary" class="form__label">Any dietary requirements?</label>
+                </div>
+                <div class="form__field">
+                  <textarea type="text" name="dietary" id="dietary" class="form__input-text h4"></textarea>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <div class="flex-ns">
+                <div class="form__info">
+                  <label for="tune" class="form__label">Any song choices?</label>
+                </div>
+                <div class="form__field">
+                  <textarea type="text" name="tune" id="tune" class="form__input-text h4"></textarea>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <div class="flex-ns">
+                <div class="form__info">
+                  <label for="comment" class="form__label">Anything else we should know?</label>
+                </div>
+                <div class="form__field">
+                  <textarea type="text" name="comment" id="comment" class="form__input-text h4"></textarea>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <div class="flex-ns">
+                <div class="form__info">&nbsp;</div>
+                <div class="form__field">
+                  <button type="submit" class="button">Submit</button>
+                </div>
+              </div>
             </fieldset>
           </form>
         </div>
@@ -392,8 +443,8 @@ svgCore.library.add(icons.fas)
     </main>
     <footer class="pa3">
       <div class="wrapper flex-ns items-start-ns justify-between-ns pt3">
-        <p class="mv1">Made with ❤️ by Donna and Kevin</p>
-        <ul class="footer-links">
+        <p class="mv1 leaves-foreground">Made with ❤️ by Donna and Kevin</p>
+        <ul class="footer-links leaves-foreground">
           <li class="footer-links__item">
             <a href="https://github.com/kevindew/donnakevin.wedding" class="link">Source code</a>
           </li>
