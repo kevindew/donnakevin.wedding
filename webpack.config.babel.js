@@ -42,12 +42,24 @@ export default (_env, argv) => {
           use: ['file-loader']
         },
         {
-          test: /\.(ics)$/,
+          test: /\.ics$/,
           use: [
             {
               loader: 'file-loader',
               options: {
                 name: '[name].[ext]?[contenthash]'
+              }
+            }
+          ]
+        },
+        {
+          test: /-redirect\.html$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                regExp: /\/([^/]+)-redirect\.html$/i,
+                name: '[1]/index.html'
               }
             }
           ]
