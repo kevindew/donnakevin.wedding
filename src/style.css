@@ -312,6 +312,7 @@ html {
   padding: 0.5rem 0.75rem 0.75rem;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.75);
+  transition: color var(--default-transition);
   transition: background-color var(--default-transition);
   border-radius: 0 0 0 0.5rem;
 }
@@ -338,9 +339,12 @@ html {
   }
 }
 
+.page-nav__trigger:hover {
+  color: var(--forest-green);
+}
+
 .page-nav__trigger:hover::before {
   box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.2);
-  background-color: white;
 }
 
 .page-nav--open .page-nav__trigger,
