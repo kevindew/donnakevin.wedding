@@ -33,6 +33,10 @@
   --default-transition: 0.15s ease-in-out;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (--breakpoint-large) {
   body {
     background-color: white;
