@@ -102,6 +102,7 @@ html {
 .wrapper {
   margin: auto;
   max-width: 48rem;
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
 }
 
 .pane {
