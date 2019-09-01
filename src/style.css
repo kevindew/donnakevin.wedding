@@ -264,6 +264,7 @@
 .page-nav__nav {
   background-color: white;
   height: 0;
+  max-height: 100vh;
   overflow: hidden;
   transition: height var(--default-transition);
   border-radius: 0 0 0 0.5rem;
@@ -283,12 +284,15 @@
 
 .page-nav--open .page-nav__nav,
 .page-nav__nav:target .page-nav__nav {
-  height: 21rem;
+  /* this is a bit of a bodge to get an animatable height: auto, 7 is number of
+   * items in the nav */
+  height: calc(3rem * 7);
+  overflow: scroll;
 }
 
 .page-nav--open .page-nav__nav::before,
 .page-nav__nav:target .page-nav__nav::before {
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .page-nav__trigger {
@@ -298,7 +302,7 @@
   outline: 0;
   position: absolute;
   right: 0;
-  bottom: -3rem;
+  bottom: -3.25rem;
   height: 2rem;
   width: 2rem;
   padding: 0.5rem 0.75rem 0.75rem;
@@ -331,7 +335,8 @@
 }
 
 .page-nav__trigger:hover::before {
-  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.2);
+  background-color: white;
 }
 
 .page-nav--open .page-nav__trigger,
@@ -343,7 +348,7 @@
 .page-nav__nav:target .page-nav__trigger::before,
 .page-nav--open .page-nav__trigger:hover::before,
 .page-nav__nav:target .page-nav__trigger:hover::before {
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .page-nav__list {
@@ -353,20 +358,32 @@
 }
 
 .page-nav__item {
-  margin: 0 0 var(--spacing-small) 0;
+  margin: 0;
   padding: 0;
 }
 
 .page-nav__link {
+  box-sizing: content-box;
   display: block;
   font-size: 1.25rem;
-  padding: var(--spacing-small) var(--spacing-medium);
+  outline: 0;
+  text-align: center;
+  padding: 0.75rem 1.5rem 1rem;
+  height: 1.25rem;
+  transition: color var(--default-transition);
+  transition: background-color var(--default-transition);
 }
 
 .page-nav__link:link,
 .page-nav__link:visited {
   color: var(--text-grey);
   text-decoration: none;
+}
+
+.page-nav__link:hover,
+.page-nav__link:focus {
+  color: white;
+  background-color: var(--forest-green);
 }
 
 .icon-guide {
