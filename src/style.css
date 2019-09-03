@@ -66,18 +66,21 @@ html {
 }
 
 .link {
-  text-decoration: none;
-  transition: color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out;
+  text-decoration: underline;
+  transition: color var(--default-transition);
+  transition: background-color var(--default-transition);
+  transition: text-decoration-color var(--default-transition);
 }
 
 .link:link,
 .link:visited {
   color: var(--forest-green);
+  text-decoration-color: rgba(var(--forest-green-rgb), 0.5);
 }
 
 .link:hover {
   color: var(--earth-brown);
+  text-decoration-color: transparent;
 }
 
 .link:focus,
@@ -85,11 +88,13 @@ html {
   outline: 0;
   background-color: var(--forest-green);
   color: white;
+  text-decoration-color: transparent;
 }
 
 .link:hover:focus,
 .link:hover:active {
   background-color: var(--earth-brown);
+  text-decoration-color: transparent;
 }
 
 .hero-image {
@@ -240,6 +245,10 @@ html {
   @extend .mv1;
 
   padding: 0;
+}
+
+.footer-links__link {
+  text-decoration: none;
 }
 
 @media (--breakpoint-not-small) {
