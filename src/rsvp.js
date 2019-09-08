@@ -31,6 +31,20 @@ form.addEventListener('submit', event => {
     const button = form.querySelector('button[type=submit]')
     button.textContent = 'Sending...'
     button.disabled = true
+    sendFormData()
+      .then(response => {
+        if (response.ok) {
+          return response
+        }
+
+        throw new Error(response)
+      })
+      .then(() => {
+        console.log('success')
+      })
+      .catch(() => {
+        console.log('failure')
+      })
   } else {
     formSubmitting = false
   }
@@ -63,4 +77,21 @@ function validateRsvp () {
   }
 
   return valid
+}
+
+function sendFormData () {
+  const data = {}
+  const formData = new window.FormData(form)
+  for (const [key, value] of formData.entries()) {
+    data[key] = value
+  }
+
+  return window.fetch(form.action, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
 }
