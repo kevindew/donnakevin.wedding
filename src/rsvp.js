@@ -40,10 +40,13 @@ form.addEventListener('submit', event => {
         throw new Error(response)
       })
       .then(() => {
-        console.log('success')
+        const wrapper = form.closest('.wrapper')
+        const rsvpThanks = document.querySelector('#rsvp-thanks')
+        wrapper.parentNode.replaceChild(rsvpThanks.querySelector('.wrapper'), wrapper)
+        rsvpThanks.parentNode.removeChild(rsvpThanks)
       })
-      .catch(() => {
-        console.log('failure')
+      .catch(error => {
+        console.error(error)
       })
   } else {
     formSubmitting = false
