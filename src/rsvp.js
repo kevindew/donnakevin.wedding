@@ -25,10 +25,12 @@ form.addEventListener('submit', event => {
   }
   formSubmitting = true
 
+  hideFormFailed()
   const valid = validateRsvp()
 
   if (valid) {
     const button = form.querySelector('button[type=submit]')
+    button.dataset.original = button.textContent
     button.textContent = 'Sending...'
     button.disabled = true
     sendFormData()
@@ -47,6 +49,10 @@ form.addEventListener('submit', event => {
       })
       .catch(error => {
         console.error(error)
+        showFormFailed()
+        button.textContent = button.dataset.original
+        button.disabled = false
+        formSubmitting = false
       })
   } else {
     formSubmitting = false
@@ -80,6 +86,35 @@ function validateRsvp () {
   }
 
   return valid
+}
+
+function showFormFailed () {
+  const el = document.createElement('div')
+  el.id = 'rsvp-failed'
+  el.setAttribute('role', 'alert')
+  el.tabIndex = -1
+  el.classList.add('rsvp-failed')
+  el.innerHTML = `
+    <h3 class="f3 tc mv3">Oops, something went wrong</h3>
+    <p class="section-copy tc mv3">
+      We didn't receive your response, please try again or
+      email us at
+      <a href="mailto:help@donnakevin.wedding?subject=Wedding%20RSVP"
+         class="link link--error">help@donnakevin.wedding</a>
+      </a>
+    </p>
+  `
+
+  form.parentNode.insertBefore(el, form)
+  el.focus()
+}
+
+function hideFormFailed () {
+  const wrapper = form.parentNode
+  const formFailed = wrapper.querySelector('#rsvp-failed')
+  if (formFailed) {
+    wrapper.removeChild(formFailed)
+  }
 }
 
 function sendFormData () {
