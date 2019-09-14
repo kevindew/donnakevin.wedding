@@ -6,12 +6,15 @@ commentLabel.dataset.canAttend = commentLabel.innerHTML
 for (const attendRadio of form.querySelectorAll('[name=attend]')) {
   attendRadio.addEventListener('change', event => {
     const canAttend = form.querySelector('#can-attend')
+    const commentHint = form.querySelector('#comment-hint')
 
     if (event.target.value === 'no') {
       canAttend.style.display = 'none'
+      commentHint.style.display = 'none'
       commentLabel.innerHTML = commentLabel.dataset.cantAttend
     } else {
       canAttend.style.display = 'block'
+      commentHint.style.display = 'block'
       commentLabel.innerHTML = commentLabel.dataset.canAttend
     }
   })

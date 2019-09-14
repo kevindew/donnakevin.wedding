@@ -409,7 +409,7 @@ svgCore.library.add(icons.fas)
             <fieldset class="form__fieldset">
               <div class="flex-ns">
                 <div class="form__info">
-                  <label for="name" class="form__label">Who are you?</label>
+                  <label for="name" class="form__label">What is your name?</label>
                 </div>
                 <div class="form__field">
                   <input type="text" name="name" id="name" class="form__input-text">
@@ -419,7 +419,7 @@ svgCore.library.add(icons.fas)
             <fieldset class="form__fieldset">
               <div class="flex-ns">
                 <div class="form__info">
-                  <label class="form__label">Are you attending?</label>
+                  <label class="form__label">Will you be there?</label>
                 </div>
                 <div class="form__field">
                   <label class="form__label form__label--radio">
@@ -437,10 +437,17 @@ svgCore.library.add(icons.fas)
               <fieldset class="form__fieldset">
                 <div class="flex-ns">
                   <div class="form__info">
-                    <label for="guests" class="form__label">Who is coming with you?</label>
+                    <label for="guests" class="form__label">Who are you coming with?</label>
+                    <span class="form__hint">
+                      Please provide the name of each guest and include ages
+                      for children
+                    </span>
                   </div>
                   <div class="form__field">
-                    <textarea type="text" name="guests" id="guests" class="form__input-text h4"></textarea>
+                    <textarea type="text"
+                              name="guests"
+                              id="guests"
+                              class="form__input-text h4"></textarea>
                   </div>
                 </div>
               </fieldset>
@@ -448,19 +455,12 @@ svgCore.library.add(icons.fas)
                 <div class="flex-ns">
                   <div class="form__info">
                     <label for="dietary" class="form__label">Any dietary requirements?</label>
+                    <span class="form__hint">
+                      Please list these for each guest
+                    </span>
                   </div>
                   <div class="form__field">
                     <textarea type="text" name="dietary" id="dietary" class="form__input-text h4"></textarea>
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset class="form__fieldset">
-                <div class="flex-ns">
-                  <div class="form__info">
-                    <label for="tune" class="form__label">Any song choices?</label>
-                  </div>
-                  <div class="form__field">
-                    <textarea type="text" name="tune" id="tune" class="form__input-text h4"></textarea>
                   </div>
                 </div>
               </fieldset>
@@ -472,8 +472,12 @@ svgCore.library.add(icons.fas)
                          class="form__label"
                          id="comment-label"
                          data-cant-attend="Any message for us?">
-                    Anything else we should know?
+                    Anything else?
                   </label>
+                  <span class="form__hint" id="comment-hint">
+                    Any questions, comments or access needs we shoud know
+                    of
+                  </span>
                 </div>
                 <div class="form__field">
                   <textarea type="text" name="comment" id="comment" class="form__input-text h4"></textarea>

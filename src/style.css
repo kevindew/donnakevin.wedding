@@ -223,6 +223,13 @@ html {
   display: block;
 }
 
+.form__hint {
+  @extend .f5;
+
+  display: block;
+  margin-bottom: var(--spacing-medium);
+}
+
 .form__input-text {
   border: 2px solid var(--forest-green);
   border-radius: 0.5em;
