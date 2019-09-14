@@ -236,6 +236,7 @@ html {
   width: 100%;
   padding: var(--spacing-small);
   transition: box-shadow 0.15s ease-in-out;
+  appearance: none;
 }
 
 .form__input-text:focus {
