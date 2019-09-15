@@ -65,7 +65,10 @@ svgCore.library.add(icons.fas)
             </nav>
           </div>
           <h1 class="ma0">
-            <img src="<%= require('./images/logo.png') %>"
+            <img src="<%= require('./images/logo-512.jpg') %>"
+                 srcset="<%= require('./images/logo-512.jpg') %>,
+                         <%= require('./images/logo-1024.jpg') %> 2x,
+                         <%= require('./images/logo-1536.jpg') %> 3x"
                  alt="Donna Carter &amp; Kevin Dew - 28.03.20"
                  class="hero-image">
           </h1>
