@@ -43,10 +43,15 @@ html {
   body {
     background-color: white;
     background-image:
-      url(images/leaves-left.jpg),
-      url(images/leaves-right.jpg),
-      url(images/leaves-left.jpg),
-      url(images/leaves-right.jpg);
+      url(images/leaves-left-200.jpg),
+      url(images/leaves-right-200.jpg),
+      url(images/leaves-left-200.jpg),
+      url(images/leaves-right-200.jpg);
+    background-image:
+      image-set(url(images/leaves-left-200.jpg) 1x, url(images/leaves-left-400.jpg) 2x),
+      image-set(url(images/leaves-right-200.jpg) 1x, url(images/leaves-right-400.jpg) 2x),
+      image-set(url(images/leaves-left-200.jpg) 1x, url(images/leaves-left-400.jpg) 2x),
+      image-set(url(images/leaves-right-200.jpg) 1x, url(images/leaves-right-400.jpg) 2x);
     background-position:
       left -254px,
       right -254px,
@@ -157,7 +162,10 @@ html {
 @media (--breakpoint-not-small) {
   .pane--leaves-gate {
     background-color: white;
-    background-image: url(images/leaves-left.jpg), url(images/leaves-right.jpg);
+    background-image: url(images/leaves-left-200.jpg), url(images/leaves-right-200.jpg);
+    background-image:
+      image-set(url(images/leaves-left-200.jpg) 1x, url(images/leaves-left-400.jpg) 2x),
+      image-set(url(images/leaves-right-200.jpg) 1x, url(images/leaves-right-400.jpg) 2x);
     background-position: left, right;
     background-repeat: no-repeat;
   }
