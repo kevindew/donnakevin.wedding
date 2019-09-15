@@ -150,7 +150,8 @@ html {
 }
 
 .pane--leaves {
-  background: white url(images/leaves.jpg) center center;
+  background: white url(images/leaves-400.jpg) center center;
+  background-image: image-set(url(images/leaves-400.jpg) 1x, url(images/leaves-800.jpg) 2x);
 }
 
 @media (--breakpoint-not-small) {

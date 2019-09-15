@@ -63,6 +63,14 @@
             "extend"
           ]
         }
+      ],
+      "unit-no-unknown": [
+        true,
+        {
+          "ignoreFunctions": [
+            "image-set"
+          ]
+        }
       ]
     }
   }

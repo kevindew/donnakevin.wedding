@@ -31,7 +31,13 @@ export default (_env, argv) => {
                 plugins: () => [
                   postcssImport(),
                   postcssExtend(),
-                  postcssPresetEnv({ stage: 1, preserve: false })
+                  postcssPresetEnv({
+                    stage: 1,
+                    preserve: false,
+                    features: {
+                      'image-set-function': false
+                    }
+                  })
                 ]
               }
             }
