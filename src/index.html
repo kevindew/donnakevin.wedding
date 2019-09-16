@@ -78,7 +78,9 @@ svgCore.library.add(icons.fas)
     <main>
       <div class="pane pane--pale-green">
         <div class="wrapper mw6">
-          <img src="<%= require('./images/us.jpg') %>"
+          <img src="<%= require('./images/us-256.jpg') %>"
+               srcset="<%= require('./images/us-256.jpg') %>,
+                       <%= require('./images/us-512.jpg') %> 2x"
                alt="Donna and Kevin at sea"
                class="br-100 mt3 mw5 db center">
           <h2 class="section-header tc">We’re getting married...</h2>
@@ -197,7 +199,9 @@ svgCore.library.add(icons.fas)
           <h2 class="section-header tc">Places to stay</h2>
           <div class="image-highlight">
             <div class="image-highlight__image-container">
-              <img src="<%= require('./images/rudding-park.jpg') %>"
+              <img src="<%= require('./images/rudding-park-192.jpg') %>"
+                   srcset="<%= require('./images/rudding-park-192.jpg') %>,
+                           <%= require('./images/rudding-park-384.jpg') %> 2x"
                    alt=""
                    class="image-highlight__image"
                    role="presentation">
@@ -223,7 +227,9 @@ svgCore.library.add(icons.fas)
           </div>
           <div class="image-highlight">
             <div class="image-highlight__image-container">
-              <img src="<%= require('./images/premier-inn.jpg') %>"
+              <img src="<%= require('./images/premier-inn-192.jpg') %>"
+                   srcset="<%= require('./images/premier-inn-192.jpg') %>,
+                           <%= require('./images/premier-inn-384.jpg') %> 2x"
                    alt=""
                    class="image-highlight__image"
                    role="presentation">
@@ -244,7 +250,9 @@ svgCore.library.add(icons.fas)
           </div>
           <div class="image-highlight">
             <div class="image-highlight__image-container">
-              <img src="<%= require('./images/harrogate.jpg') %>"
+              <img src="<%= require('./images/harrogate-192.jpg') %>"
+                   srcset="<%= require('./images/harrogate-192.jpg') %>,
+                           <%= require('./images/harrogate-384.jpg') %> 2x"
                    alt=""
                    class="image-highlight__image"
                    role="presentation">
