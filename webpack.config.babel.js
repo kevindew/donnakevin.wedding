@@ -1,5 +1,6 @@
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import imageminMozjpeg from 'imagemin-mozjpeg'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin'
 import path from 'path'
@@ -44,8 +45,22 @@ export default (_env, argv) => {
           ]
         },
         {
-          test: /\.(png|svg|jpg|gif|woff|woff2)$/,
+          test: /\.(svg|woff|woff2)$/,
           use: ['file-loader']
+        },
+        {
+          test: /\.jpg$/,
+          use: [
+            'file-loader',
+            {
+              loader: 'img-loader',
+              options: {
+                plugins: [
+                  imageminMozjpeg({ progressive: true })
+                ]
+              }
+            }
+          ]
         },
         {
           test: /\.ics$/,
