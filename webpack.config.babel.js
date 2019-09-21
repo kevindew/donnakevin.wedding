@@ -46,12 +46,24 @@ export default (_env, argv) => {
         },
         {
           test: /\.(svg|woff|woff2)$/,
-          use: ['file-loader']
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[name].[contenthash].[ext]'
+              }
+            }
+          ]
         },
         {
           test: /\.(jpg|png)$/,
           use: [
-            'file-loader',
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[name].[contenthash].[ext]'
+              }
+            },
             {
               loader: 'img-loader',
               options: {
