@@ -49,7 +49,7 @@ export default (_env, argv) => {
           use: ['file-loader']
         },
         {
-          test: /\.jpg$/,
+          test: /\.(jpg|png)$/,
           use: [
             'file-loader',
             {
@@ -63,7 +63,7 @@ export default (_env, argv) => {
           ]
         },
         {
-          test: /\.ics$/,
+          test: /\.(ics|ico)$/,
           use: [
             {
               loader: 'file-loader',
