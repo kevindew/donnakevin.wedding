@@ -376,7 +376,7 @@ html {
 }
 
 .page-nav--open .page-nav__nav,
-.page-nav__nav:target .page-nav__nav {
+.page-nav:target .page-nav__nav {
   /* this is a bit of a bodge to get an animatable height: auto, 7 is number of
    * items in the nav */
   height: calc(3rem * 7);
@@ -384,7 +384,7 @@ html {
 }
 
 .page-nav--open .page-nav__nav::before,
-.page-nav__nav:target .page-nav__nav::before {
+.page-nav:target .page-nav__nav::before {
   box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -437,14 +437,14 @@ html {
 }
 
 .page-nav--open .page-nav__trigger,
-.page-nav__nav:target .page-nav__trigger {
+.page-nav:target .page-nav__trigger {
   background-color: white;
 }
 
 .page-nav--open .page-nav__trigger::before,
-.page-nav__nav:target .page-nav__trigger::before,
+.page-nav:target .page-nav__trigger::before,
 .page-nav--open .page-nav__trigger:hover::before,
-.page-nav__nav:target .page-nav__trigger:hover::before {
+.page-nav:target .page-nav__trigger:hover::before {
   box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
