@@ -380,7 +380,7 @@ html {
   /* this is a bit of a bodge to get an animatable height: auto, 7 is number of
    * items in the nav */
   height: calc(3rem * 7);
-  overflow: scroll;
+  overflow-y: auto;
 }
 
 .page-nav--open .page-nav__nav::before,
