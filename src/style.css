@@ -391,14 +391,13 @@ html {
 .page-nav__trigger {
   box-sizing: content-box;
   color: var(--text-grey);
-  font-size: 2rem;
   outline: 0;
   position: absolute;
   right: 0;
-  bottom: -3.25rem;
-  height: 2rem;
-  width: 2rem;
-  padding: 0.5rem 0.75rem 0.75rem;
+  bottom: -3.125rem;
+  height: 1.75rem;
+  width: 1.75rem;
+  padding: 0.5rem 0.875rem 0.875rem;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.75);
   transition: color var(--default-transition);
@@ -511,9 +510,18 @@ html {
   }
 }
 
+/* Double specificity is needed to override font-awesome style */
+.icon-guide__icon.icon-guide__icon {
+  width: 2rem;
+  height: auto;
+}
+
 @media (--breakpoint-not-small) {
+  .icon-guide__icon.icon-guide__icon {
+    width: 4rem;
+  }
+
   .icon-guide__icon {
-    font-size: 4rem;
     margin-bottom: var(--spacing-medium);
   }
 }

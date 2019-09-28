@@ -40,7 +40,10 @@ svgCore.library.add(icons.fas)
                class="page-nav__trigger"
                tabindex="-1"
                aria-hidden="true">
-              <%= svgCore.icon({ iconName: 'bars' }).html %>
+              <%= svgCore.icon(
+                    { iconName: 'bars' },
+                    { styles: { width: '100%', height: 'auto' } }
+                  ).html %>
             </a>
             <nav class="page-nav__nav">
               <ul class="page-nav__list">
