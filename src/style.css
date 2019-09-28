@@ -64,12 +64,17 @@ html {
 .text-grey { color: var(--text-grey); }
 
 .love-potion {
-  font-family: 'Love Potion', serif;
+  font-family: 'Love Potion', courier, sans-serif;
   text-transform: uppercase;
 }
 
 .titillium-web {
-  font-family: 'Titillium Web', sans-serif;
+  font-family:
+    'Titillium Web',
+    'helvetica neue',
+    helvetica,
+    arial,
+    sans-serif;
 }
 
 .link {
