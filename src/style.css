@@ -129,6 +129,7 @@ html {
   max-width: 32rem;
   margin: auto;
   display: block;
+  margin-bottom: var(--spacing-medium);
 }
 
 .wrapper {
@@ -138,7 +139,7 @@ html {
 }
 
 .pane {
-  padding: var(--spacing-medium);
+  padding: var(--spacing-large) var(--spacing-medium) var(--spacing-medium);
 }
 
 .pane--forest-green {
@@ -157,6 +158,7 @@ html {
 .pane--leaves {
   background: white url(images/leaves-400.jpg) center center;
   background-image: image-set(url(images/leaves-400.jpg) 1x, url(images/leaves-800.jpg) 2x);
+  padding-top: var(--spacing-medium);
 }
 
 @media (--breakpoint-not-small) {
@@ -275,6 +277,8 @@ html {
   @extend .love-potion;
   @extend .f1;
   @extend .lh-title;
+  @extend .ma0;
+  @extend .mb4;
 }
 
 .section-copy {
@@ -282,6 +286,8 @@ html {
   @extend .f5;
   @extend .f4-ns;
   @extend .fs-normal;
+
+  margin: 0 0 1.25em;
 }
 
 .button,
@@ -485,11 +491,11 @@ html {
 
 .icon-guide {
   @extend .flex-ns;
-  @extend .mb4-ns;
+  @extend .mb4;
 }
 
 .icon-guide__header {
-  @extend .mv4;
+  @extend .mb4;
   @extend .w-third-ns;
   @extend .f2;
   @extend .tc-ns;
@@ -534,7 +540,7 @@ html {
 
 .image-highlight {
   @extend .flex-ns;
-  @extend .mb5;
+  @extend .mb4;
 }
 
 .image-highlight__image-container {
@@ -558,12 +564,12 @@ html {
 .image-highlight__title {
   @extend .love-potion;
   @extend .f2;
-  @extend .mv4;
+  @extend .mv3;
   @extend .mt0-ns;
 }
 
 .timeline-entry {
-  @extend .mv5;
+  @extend .mb4;
   @extend .flex-ns;
 }
 
