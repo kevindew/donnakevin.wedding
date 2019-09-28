@@ -456,14 +456,27 @@ svgCore.library.add(icons.fas)
                   <label class="form__label">Will you be there?</label>
                 </div>
                 <div class="form__field">
-                  <label class="form__label form__label--radio">
-                    <input type="radio" name="attend" value="yes" checked>
-                    Yup, I’m ready to eat, drink, and see you get married!
-                  </label>
-                  <label class="form__label form__label--radio">
-                    <input type="radio" name="attend" value="no">
-                    Afraid not, I will toast to you from afar.
-                  </label>
+                  <div class="form__radio">
+                    <input type="radio"
+                           name="attend"
+                           id="attend-yes"
+                           value="yes"
+                           class="form__input-radio"
+                           checked>
+                    <label class="form__label form__label--radio" for="attend-yes">
+                      Yup, I’m ready to eat, drink, and see you get married!
+                    </label>
+                  </div>
+                  <div class="form__radio">
+                    <input type="radio"
+                           name="attend"
+                           id="attend-no"
+                           value="no"
+                           class="form__input-radio">
+                    <label class="form__label form__label--radio" for="attend-no">
+                      Afraid not, I will toast to you from afar.
+                    </label>
+                  </div>
                 </div>
               </div>
             </fieldset>
