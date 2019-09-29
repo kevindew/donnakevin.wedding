@@ -444,8 +444,17 @@ html {
 .page-nav:target .page-nav__nav {
   /* this is a bit of a bodge to get an animatable height: auto, 7 is number of
    * items in the nav */
-  height: calc(3rem * 7);
+  height: 21rem;
   overflow-y: auto;
+}
+
+/* This is used to fix a rather unsightly scroll bar during animations on
+ * windows machines */
+@media screen and (min-height: 21em) {
+  .page-nav--open .page-nav__nav,
+  .page-nav:target .page-nav__nav {
+    overflow-y: hidden;
+  }
 }
 
 .page-nav--open .page-nav__nav::before,
