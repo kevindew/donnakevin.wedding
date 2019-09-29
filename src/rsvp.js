@@ -45,10 +45,12 @@ form.addEventListener('submit', event => {
         throw new Error(response)
       })
       .then(() => {
-        const wrapper = form.closest('.wrapper')
+        const oldWrapper = form.closest('.wrapper')
         const rsvpThanks = document.querySelector('#rsvp-thanks')
-        wrapper.parentNode.replaceChild(rsvpThanks.querySelector('.wrapper'), wrapper)
+        const newWrapper = rsvpThanks.querySelector('.wrapper')
+        oldWrapper.parentNode.replaceChild(newWrapper, oldWrapper)
         rsvpThanks.parentNode.removeChild(rsvpThanks)
+        newWrapper.scrollIntoView({ behavior: 'smooth' })
       })
       .catch(error => {
         console.error(error)
