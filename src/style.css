@@ -409,6 +409,7 @@ html {
   top: 0;
   right: 0;
   width: 14rem;
+  z-index: 1;
 }
 
 @media screen and (min-width: 48em) {
