@@ -577,13 +577,14 @@ html {
 
 /* Double specificity is needed to override font-awesome style */
 .icon-guide__icon.icon-guide__icon {
-  width: 2rem;
-  height: auto;
+  width: 1em;
+  height: 1em;
 }
 
 @media (--breakpoint-not-small) {
   .icon-guide__icon.icon-guide__icon {
     width: 4rem;
+    height: 4rem;
   }
 
   .icon-guide__icon {
