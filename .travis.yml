@@ -9,5 +9,6 @@ deploy:
   github_token: $GITHUB_TOKEN
   keep_history: true
   target_branch: gh-pages
+  fqdn: donnakevin.wedding
   on:
     branch: master
