@@ -172,29 +172,17 @@ html {
   }
 }
 
-.pane--rsvp-thanks,
-.pane--rsvp-thanks:target ~ .pane--rsvp {
+.pane--rsvp,
+.pane--rsvp:target ~ .pane--gifts {
   display: none;
 }
 
-.pane--rsvp-thanks:target {
+.pane--rsvp:target {
   display: block;
 }
 
 .leaves-foreground {
   background-color: rgba(255, 255, 255, 0.9);
-}
-
-.rsvp-failed {
-  @extend .center;
-  @extend .ma4;
-  @extend .pa3;
-  @extend .w-70-ns;
-
-  color: var(--error);
-  border: 4px solid var(--error);
-  border-radius: 0.5rem;
-  outline: 0;
 }
 
 .form {
