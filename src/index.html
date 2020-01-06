@@ -73,11 +73,6 @@ svgCore.library.add(icons.fas)
                   </a>
                 </li>
                 <li class="page-nav__item">
-                  <a href="#rsvp" class="page-nav__link">
-                    RSVP
-                  </a>
-                </li>
-                <li class="page-nav__item">
                   <a href="mailto:help@donnakevin.wedding" class="page-nav__link">
                     Contact us
                   </a>
@@ -432,123 +427,11 @@ svgCore.library.add(icons.fas)
           </div>
         </div>
       </div>
-      <div class="pane pane--rsvp" id="rsvp">
-        <div class="wrapper">
-          <h2 class="section-header tc mt3">RSVP</h2>
-          <p class="section-copy tc">
-            Please let us know if you can attend by the 30th November 2019.
-          </p>
-          <form method="post"
-                action="https://i4z9ijbyol.execute-api.eu-west-1.amazonaws.com/default/rsvp"
-                class="form mt4"
-                id="rsvp-form">
-            <fieldset class="form__fieldset">
-              <div class="flex-ns">
-                <div class="form__info">
-                  <label for="name" class="form__label">What is your name?</label>
-                </div>
-                <div class="form__field">
-                  <input type="text" name="name" id="name" class="form__input-text">
-                </div>
-              </div>
-            </fieldset>
-            <fieldset class="form__fieldset">
-              <div class="flex-ns">
-                <div class="form__info">
-                  <label class="form__label">Will you be there?</label>
-                </div>
-                <div class="form__field">
-                  <div class="form__radio">
-                    <input type="radio"
-                           name="attend"
-                           id="attend-yes"
-                           value="yes"
-                           class="form__input-radio"
-                           checked>
-                    <label class="form__label form__label--radio" for="attend-yes">
-                      Yup, I’m ready to eat, drink, and see you get married!
-                    </label>
-                  </div>
-                  <div class="form__radio">
-                    <input type="radio"
-                           name="attend"
-                           id="attend-no"
-                           value="no"
-                           class="form__input-radio">
-                    <label class="form__label form__label--radio" for="attend-no">
-                      Afraid not, I will toast to you from afar.
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-            <div id="can-attend" class="form__can-attend form__can-attend--visible">
-              <fieldset class="form__fieldset">
-                <div class="flex-ns">
-                  <div class="form__info">
-                    <label for="guests" class="form__label">Who are you coming with?</label>
-                    <span class="form__hint">
-                      Please provide the name of each guest and include ages
-                      for children
-                    </span>
-                  </div>
-                  <div class="form__field">
-                    <textarea type="text"
-                              name="guests"
-                              id="guests"
-                              class="form__input-text h4"></textarea>
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset class="form__fieldset">
-                <div class="flex-ns">
-                  <div class="form__info">
-                    <label for="dietary" class="form__label">Any dietary requirements?</label>
-                    <span class="form__hint">
-                      Please list these for each guest
-                    </span>
-                  </div>
-                  <div class="form__field">
-                    <textarea type="text" name="dietary" id="dietary" class="form__input-text h4"></textarea>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-            <fieldset class="form__fieldset">
-              <div class="flex-ns">
-                <div class="form__info">
-                  <label for="comment"
-                         class="form__label"
-                         id="comment-label"
-                         data-cant-attend="Any message for us?">
-                    Anything else?
-                  </label>
-                  <span class="form__hint" id="comment-hint">
-                    Any questions, comments or access needs we shoud know
-                    of
-                  </span>
-                </div>
-                <div class="form__field">
-                  <textarea type="text" name="comment" id="comment" class="form__input-text h4"></textarea>
-                </div>
-              </div>
-            </fieldset>
-            <fieldset class="form__fieldset">
-              <div class="flex-ns">
-                <div class="form__info">&nbsp;</div>
-                <div class="form__field">
-                  <button type="submit" class="button">Submit</button>
-                </div>
-              </div>
-            </fieldset>
-          </form>
-        </div>
-      </div>
     </main>
-    <footer class="ph3 pb3">
+    <footer class="pa3 footer">
       <div class="wrapper flex-ns items-start-ns justify-between-ns pt3">
-        <p class="mv1 leaves-foreground">Made with ❤️ by Donna and Kevin</p>
-        <ul class="footer-links leaves-foreground">
+        <p class="mv1">Made with ❤️ by Donna and Kevin</p>
+        <ul class="footer-links">
           <li class="footer-links__item">
             <a href="https://github.com/kevindew/donnakevin.wedding" class="link footer-links__link">Source code</a>
           </li>

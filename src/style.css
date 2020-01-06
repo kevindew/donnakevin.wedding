@@ -44,19 +44,13 @@ html {
     background-color: white;
     background-image:
       url(images/leaves-left-200.jpg),
-      url(images/leaves-right-200.jpg),
-      url(images/leaves-left-200.jpg),
       url(images/leaves-right-200.jpg);
     background-image:
-      image-set(url(images/leaves-left-200.jpg) 1x, url(images/leaves-left-400.jpg) 2x),
-      image-set(url(images/leaves-right-200.jpg) 1x, url(images/leaves-right-400.jpg) 2x),
       image-set(url(images/leaves-left-200.jpg) 1x, url(images/leaves-left-400.jpg) 2x),
       image-set(url(images/leaves-right-200.jpg) 1x, url(images/leaves-right-400.jpg) 2x);
     background-position:
       left -254px,
-      right -254px,
-      left calc(100% + 254px),
-      right calc(100% + 254px);
+      right -254px;
     background-repeat: no-repeat;
   }
 }
@@ -377,6 +371,10 @@ html {
   box-shadow: 0 0 6px 2px rgba(var(--forest-green-rgb), 0.5);
 }
 
+.footer {
+  background-color: var(--muted-sage-green);
+}
+
 .footer-links {
   list-style-type: none;
   margin: 0;
@@ -444,7 +442,7 @@ html {
 .page-nav:target .page-nav__nav {
   /* this is a bit of a bodge to get an animatable height: auto, 7 is number of
    * items in the nav */
-  height: 21rem;
+  height: 18rem;
   overflow-y: auto;
 }
 

@@ -10,4 +10,3 @@ import 'formdata-polyfill'
 import 'whatwg-fetch'
 
 import './menu'
-import './rsvp'
