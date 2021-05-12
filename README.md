@@ -5,7 +5,7 @@
 Wedding website for the marriage of
 [Donna Carter](https://github.com/donnacarter) and
 [Kevin Dew](https://github.com/kevindew) which is due to
-take place on the 29th October 2020 (after a couple of pandemic setbacks).
+take place on the 29th October 2021 (after a couple of pandemic setbacks).
 
 ## Running locally
 
