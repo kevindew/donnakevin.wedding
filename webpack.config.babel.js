@@ -106,6 +106,17 @@ export default (_env, argv) => {
               }
             }
           ]
+        },
+        {
+          test: /CNAME/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[name]'
+              }
+            }
+          ]
         }
       ]
     },
