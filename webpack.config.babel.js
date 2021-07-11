@@ -1,12 +1,8 @@
-import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
-import imageminMozjpeg from 'imagemin-mozjpeg'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin'
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
+import ImageMinimizerPlugin from 'image-minimizer-webpack-plugin'
 import path from 'path'
-import postcssImport from 'postcss-import'
-import postcssExtend from 'postcss-extend'
-import postcssPresetEnv from 'postcss-preset-env'
 import TerserJsPlugin from 'terser-webpack-plugin'
 
 export default (_env, argv) => {
@@ -14,7 +10,9 @@ export default (_env, argv) => {
     entry: './src/main.js',
     output: {
       path: path.join(__dirname, '/dist'),
-      filename: '[name].[hash].js'
+      filename: '[name].[contenthash].js',
+      clean: true,
+      assetModuleFilename: '[name].[contenthash][ext][query]'
     },
     module: {
       rules: [
@@ -38,93 +36,65 @@ export default (_env, argv) => {
             {
               loader: 'postcss-loader',
               options: {
-                ident: 'postcss',
-                plugins: () => [
-                  postcssImport(),
-                  postcssExtend(),
-                  postcssPresetEnv({
-                    stage: 1,
-                    preserve: false,
-                    features: {
-                      'image-set-function': false
-                    }
-                  })
-                ]
+                postcssOptions: {
+                  plugins: [
+                    'postcss-import',
+                    'postcss-extend',
+                    [
+                      'postcss-preset-env',
+                      {
+                        stage: 1,
+                        preserve: false,
+                        features: { 'image-set-function': false }
+                      }
+                    ]
+                  ]
+                }
               }
             }
           ]
         },
         {
           test: /\.(svg|woff|woff2)$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[name].[contenthash].[ext]'
-              }
-            }
-          ]
+          type: 'asset/resource'
         },
         {
           test: /\.(jpg|png)$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[name].[contenthash].[ext]'
-              }
-            },
-            {
-              loader: 'img-loader',
-              options: {
-                plugins: [
-                  imageminMozjpeg({ progressive: true })
-                ]
-              }
-            }
-          ]
+          type: 'asset'
         },
         {
           test: /\.(ics|ico)$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[name].[ext]?[contenthash]'
-              }
-            }
-          ]
+          type: 'asset/resource',
+          generator: {
+            filename: '[name][ext]?[contenthash]'
+          }
         },
         {
           test: /-redirect\.html$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                regExp: /\/([^/]+)-redirect\.html$/i,
-                name: '[1]/index.html'
-              }
+          type: 'asset/resource',
+          generator: {
+            filename: (pathData) => {
+              const match = pathData.filename.match(/\/([^/]+)-redirect\.html$/i)
+              return match[1] + '/index.html'
             }
-          ]
+          }
         },
         {
           test: /CNAME/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[name]'
-              }
-            }
-          ]
+          type: 'asset/resource',
+          generator: {
+            filename: '[name]'
+          }
         }
       ]
     },
     optimization: {
-      minimizer: [new TerserJsPlugin({}), new OptimizeCssAssetsPlugin({})]
+      minimizer: [
+        new TerserJsPlugin({}),
+        new CssMinimizerPlugin({})
+      ]
     },
     plugins: [
-      new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({
         filename: '[name].[contenthash].css'
       }),
@@ -133,6 +103,11 @@ export default (_env, argv) => {
         minify: {
           collapseWhitespace: true,
           removeComments: true
+        }
+      }),
+      new ImageMinimizerPlugin({
+        minimizerOptions: {
+          plugins: ['mozjpeg', 'pngquant']
         }
       })
     ]
