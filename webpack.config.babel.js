@@ -60,7 +60,11 @@ export default (_env, argv) => {
         },
         {
           test: /\.(jpg|png)$/,
-          type: 'asset'
+          type: 'asset',
+          // temporary fix for https://github.com/webpack-contrib/image-minimizer-webpack-plugin/issues/217
+          generator: {
+            filename: '[name][ext]?[contenthash]'
+          }
         },
         {
           test: /\.(ics|ico)$/,
