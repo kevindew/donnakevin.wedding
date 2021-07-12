@@ -44,13 +44,19 @@ html {
     background-color: white;
     background-image:
       url(images/leaves-left-200.jpg),
+      url(images/leaves-right-200.jpg),
+      url(images/leaves-left-200.jpg),
       url(images/leaves-right-200.jpg);
     background-image:
+      image-set(url(images/leaves-left-200.jpg) 1x, url(images/leaves-left-400.jpg) 2x),
+      image-set(url(images/leaves-right-200.jpg) 1x, url(images/leaves-right-400.jpg) 2x),
       image-set(url(images/leaves-left-200.jpg) 1x, url(images/leaves-left-400.jpg) 2x),
       image-set(url(images/leaves-right-200.jpg) 1x, url(images/leaves-right-400.jpg) 2x);
     background-position:
       left -254px,
-      right -254px;
+      right -254px,
+      left calc(100% + 254px),
+      right calc(100% + 254px);
     background-repeat: no-repeat;
   }
 }
@@ -172,17 +178,29 @@ html {
   }
 }
 
-.pane--rsvp,
-.pane--rsvp:target ~ .pane--gifts {
+.pane--rsvp-thanks,
+.pane--rsvp-thanks:target ~ .pane--rsvp {
   display: none;
 }
 
-.pane--rsvp:target {
+.pane--rsvp-thanks:target {
   display: block;
 }
 
 .leaves-foreground {
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.rsvp-failed {
+  @extend .center;
+  @extend .ma4;
+  @extend .pa3;
+  @extend .w-70-ns;
+
+  color: var(--error);
+  border: 4px solid var(--error);
+  border-radius: 0.5rem;
+  outline: 0;
 }
 
 .form {
@@ -359,10 +377,6 @@ html {
   box-shadow: 0 0 6px 2px rgba(var(--forest-green-rgb), 0.5);
 }
 
-.footer {
-  background-color: var(--muted-sage-green);
-}
-
 .footer-links {
   list-style-type: none;
   margin: 0;
@@ -430,7 +444,7 @@ html {
 .page-nav:target .page-nav__nav {
   /* this is a bit of a bodge to get an animatable height: auto, 7 is number of
    * items in the nav */
-  height: 18rem;
+  height: 21rem;
   overflow-y: auto;
 }
 
