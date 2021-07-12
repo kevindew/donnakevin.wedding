@@ -19,15 +19,15 @@
 
 :root {
   --sand: #fbf6e2;
-  --pale-green-rgb: 243, 244, 238;
+  --pale-green-rgb: 212, 218, 201;
   --pale-green: rgb(var(--pale-green-rgb));
-  --sage-green-rgb: 195, 211, 201;
-  --sage-green: rgb(var(--sage-green-rgb));
-  --muted-sage-green-rgb: 221, 231, 223;
-  --muted-sage-green: rgb(var(--muted-sage-green-rgb));
-  --forest-green-rgb: 112, 139, 96;
-  --forest-green: rgb(var(--forest-green-rgb));
-  --silver-grey: #d1d2d4;
+  --mint-green-rgb: 192, 220, 204;
+  --mint-green: rgb(var(--mint-green-rgb));
+  --peach-rgb: 242, 198, 126;
+  --peach: rgb(var(--peach-rgb));
+  --earth-green-rgb: 102, 106, 73;
+  --earth-green: rgb(var(--earth-green-rgb));
+  --silver-grey: #efefef;
   --earth-brown: #624a36;
   --error-rgb: 189, 51, 51;
   --error: rgb(var(--error-rgb));
@@ -37,28 +37,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-@media (--breakpoint-large) {
-  body {
-    background-color: white;
-    background-image:
-      url(images/leaves-left-200.jpg),
-      url(images/leaves-right-200.jpg),
-      url(images/leaves-left-200.jpg),
-      url(images/leaves-right-200.jpg);
-    background-image:
-      image-set(url(images/leaves-left-200.jpg) 1x, url(images/leaves-left-400.jpg) 2x),
-      image-set(url(images/leaves-right-200.jpg) 1x, url(images/leaves-right-400.jpg) 2x),
-      image-set(url(images/leaves-left-200.jpg) 1x, url(images/leaves-left-400.jpg) 2x),
-      image-set(url(images/leaves-right-200.jpg) 1x, url(images/leaves-right-400.jpg) 2x);
-    background-position:
-      left -254px,
-      right -254px,
-      left calc(100% + 254px),
-      right calc(100% + 254px);
-    background-repeat: no-repeat;
-  }
 }
 
 .text-grey { color: var(--text-grey); }
@@ -87,8 +65,8 @@ html {
 
 .link:link,
 .link:visited {
-  color: var(--forest-green);
-  text-decoration-color: rgba(var(--forest-green-rgb), 0.5);
+  color: var(--earth-green);
+  text-decoration-color: rgba(var(--earth-green-rgb), 0.5);
 }
 
 .link:hover {
@@ -98,7 +76,7 @@ html {
 
 .link:focus,
 .link:active {
-  background-color: var(--forest-green);
+  background-color: var(--earth-green);
   color: white;
   text-decoration-color: transparent;
 }
@@ -147,17 +125,20 @@ html {
   padding: var(--spacing-large) var(--spacing-medium) var(--spacing-medium);
 }
 
-.pane--forest-green {
-  background-color: var(--forest-green);
-  color: white;
+.pane--silver-grey {
+  background-color: var(--silver-grey);
+}
+
+.pane--peach {
+  background-color: var(--peach);
 }
 
 .pane--pale-green {
   background-color: var(--pale-green);
 }
 
-.pane--muted-sage-green {
-  background-color: var(--muted-sage-green);
+.pane--mint-green {
+  background-color: var(--mint-green);
 }
 
 .pane--leaves {
@@ -166,16 +147,8 @@ html {
   padding-top: var(--spacing-medium);
 }
 
-@media (--breakpoint-not-small) {
-  .pane--leaves-gate {
-    background-color: white;
-    background-image: url(images/leaves-left-200.jpg), url(images/leaves-right-200.jpg);
-    background-image:
-      image-set(url(images/leaves-left-200.jpg) 1x, url(images/leaves-left-400.jpg) 2x),
-      image-set(url(images/leaves-right-200.jpg) 1x, url(images/leaves-right-400.jpg) 2x);
-    background-position: left, right;
-    background-repeat: no-repeat;
-  }
+.leaves-foreground {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .pane--rsvp-thanks,
@@ -185,10 +158,6 @@ html {
 
 .pane--rsvp-thanks:target {
   display: block;
-}
-
-.leaves-foreground {
-  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .rsvp-failed {
@@ -247,7 +216,7 @@ html {
 }
 
 .form__input-text {
-  border: 2px solid var(--forest-green);
+  border: 2px solid var(--earth-green);
   border-radius: 0.5em;
   width: 100%;
   padding: var(--spacing-small);
@@ -257,7 +226,7 @@ html {
 
 .form__input-text:focus {
   outline: 0;
-  box-shadow: 0 0 6px 2px rgba(var(--forest-green-rgb), 0.5);
+  box-shadow: 0 0 6px 2px rgba(var(--earth-green-rgb), 0.5);
 }
 
 .form__input-radio {
@@ -280,7 +249,7 @@ html {
   border-radius: 50%;
   width: 1.5rem;
   height: 1.5rem;
-  border: 2px solid var(--forest-green);
+  border: 2px solid var(--earth-green);
 }
 
 .form__label--radio::after {
@@ -292,14 +261,14 @@ html {
   border-radius: 50%;
   width: 0.75rem;
   height: 0.75rem;
-  background-color: var(--forest-green);
+  background-color: var(--earth-green);
   opacity: 0;
   transition: opacity var(--default-transition);
   transition: box-shadow var(--default-transition);
 }
 
 .form__input-radio:focus + .form__label--radio::before {
-  box-shadow: 0 0 4px 2px rgba(var(--forest-green-rgb), 0.5);
+  box-shadow: 0 0 4px 2px rgba(var(--earth-green-rgb), 0.5);
 }
 
 .form__input-radio:checked + .form__label--radio::after {
@@ -352,8 +321,8 @@ html {
   @extend .f5;
   @extend .f4-ns;
 
-  border: 2px solid var(--forest-green);
-  color: var(--forest-green);
+  border: 2px solid var(--earth-green);
+  color: var(--earth-green);
   display: inline-block;
   border-radius: 0.5rem;
   background-color: white;
@@ -369,12 +338,12 @@ html {
 .button:focus,
 .button:disabled {
   color: white;
-  background-color: var(--forest-green);
+  background-color: var(--earth-green);
 }
 
 .button:focus {
   outline: 0;
-  box-shadow: 0 0 6px 2px rgba(var(--forest-green-rgb), 0.5);
+  box-shadow: 0 0 6px 2px rgba(var(--earth-green-rgb), 0.5);
 }
 
 .footer-links {
@@ -502,7 +471,7 @@ html {
 }
 
 .page-nav__trigger:hover {
-  color: var(--forest-green);
+  color: var(--earth-green);
 }
 
 .page-nav__trigger:hover::before {
@@ -553,7 +522,7 @@ html {
 .page-nav__link:hover,
 .page-nav__link:focus {
   color: white;
-  background-color: var(--forest-green);
+  background-color: var(--earth-green);
 }
 
 .icon-guide {
