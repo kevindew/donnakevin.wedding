@@ -87,7 +87,10 @@ svgCore.library.add(icons.fas)
             </nav>
           </div>
           <h1 class="ma0">
-            <img src="<%= require('./images/logo.png') %>"
+            <img src="<%= require('./images/logo-512.png') %>"
+                 srcset="<%= require('./images/logo-512.png') %>,
+                         <%= require('./images/logo-1024.png') %> 2x,
+                         <%= require('./images/logo-1536.png') %> 3x"
                  alt="Donna Carter &amp; Kevin Dew - 29.10.21"
                  class="hero-image">
           </h1>
@@ -97,7 +100,9 @@ svgCore.library.add(icons.fas)
     <main>
       <div class="pane pane--pale-green">
         <div class="wrapper mw6">
-          <img src="<%= require('./images/us-masks-1024.jpg') %>"
+          <img src="<%= require('./images/us-masks-256.jpg') %>"
+               srcset="<%= require('./images/us-masks-256.jpg') %>,
+                       <%= require('./images/us-masks-512.jpg') %> 2x"
                alt="Donna and Kevin in masks"
                class="br-100 mt3 mb4 mw5 db center">
           <h2 class="section-header tc">We’re getting married!</h2>
