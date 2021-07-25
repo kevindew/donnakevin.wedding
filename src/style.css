@@ -549,7 +549,7 @@ html {
 .icon-guide__header {
   @extend .w-third-ns;
   @extend .f2;
-  @extend .tc-ns;
+  @extend .tc;
   @extend .mr4-ns;
 }
 
@@ -587,6 +587,8 @@ html {
 .icon-guide__body {
   @extend .w-two-thirds-ns;
   @extend .ml4-ns;
+  @extend .tc;
+  @extend .tl-ns;
 }
 
 .image-highlight {
@@ -610,6 +612,8 @@ html {
 .image-highlight__copy-container {
   @extend .w-two-thirds-ns;
   @extend .ml4-ns;
+  @extend .tc;
+  @extend .tl-ns;
 }
 
 .image-highlight__title {
@@ -626,7 +630,7 @@ html {
 .timeline-entry__header {
   @extend .mv3;
   @extend .w-third-ns;
-  @extend .tc-ns;
+  @extend .tc;
   @extend .mr4-ns;
 }
 
@@ -635,6 +639,8 @@ html {
   @extend .w-two-thirds-ns;
   @extend .ml4-ns;
   @extend .mv0-ns;
+  @extend .tc;
+  @extend .tl-ns;
 }
 
 .timeline-entry__time {
