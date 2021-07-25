@@ -36,6 +36,7 @@
 }
 
 html {
+  background-color: var(--silver-grey);
   scroll-behavior: smooth;
 }
 
@@ -125,6 +126,10 @@ html {
   padding: 4rem 1rem 3rem;
 }
 
+.pane--white {
+  background-color: #fff;
+}
+
 .pane--silver-grey {
   background-color: var(--silver-grey);
 }
@@ -172,8 +177,10 @@ html {
   outline: 0;
 }
 
-.form {
-  font-size: 1.125rem;
+@media (--breakpoint-not-small) {
+  .form {
+    font-size: 1.125rem;
+  }
 }
 
 .form__fieldset {
@@ -250,6 +257,7 @@ html {
   width: 1.5rem;
   height: 1.5rem;
   border: 2px solid var(--earth-green);
+  background-color: #fff;
 }
 
 .form__label--radio::after {
