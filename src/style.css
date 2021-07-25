@@ -554,34 +554,22 @@ html {
 }
 
 .icon-guide__title {
-  @extend .ml2;
-  @extend .dib;
   @extend .section-sub-header;
   @extend .mb3;
 }
 
 @media (--breakpoint-not-small) {
   .icon-guide__title {
+    @extend .ml2;
+
     margin-left: 0;
-    display: block;
   }
 }
 
 /* Double specificity is needed to override font-awesome style */
 .icon-guide__icon.icon-guide__icon {
-  width: 1em;
-  height: 1em;
-}
-
-@media (--breakpoint-not-small) {
-  .icon-guide__icon.icon-guide__icon {
-    width: 4rem;
-    height: 4rem;
-  }
-
-  .icon-guide__icon {
-    margin-bottom: var(--spacing-medium);
-  }
+  width: 4rem;
+  height: 4rem;
 }
 
 .icon-guide__body {
@@ -629,6 +617,7 @@ html {
 
 .timeline-entry__header {
   @extend .mv3;
+  @extend .mt0-ns;
   @extend .w-third-ns;
   @extend .tc;
   @extend .mr4-ns;
@@ -646,20 +635,13 @@ html {
 .timeline-entry__time {
   @extend .love-potion;
   @extend .f2;
-  @extend .db-ns;
+  @extend .db;
   @extend .f1-ns;
 }
 
 .timeline-entry__event {
-  @extend .section-sub-header;
-}
+  @extend .f4;
 
-.timeline-entry__time::after {
-  content: " - ";
-}
-
-@media (--breakpoint-not-small) {
-  .timeline-entry__time::after {
-    content: "";
-  }
+  font-weight: normal;
+  text-transform: uppercase;
 }
