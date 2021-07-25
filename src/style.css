@@ -315,6 +315,14 @@ html {
   @extend .mb4;
 }
 
+.section-sub-header {
+  @extend .f3;
+  @extend .lh-title;
+
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .section-copy {
   @extend .lh-copy;
   @extend .f5;
@@ -539,7 +547,6 @@ html {
 }
 
 .icon-guide__header {
-  @extend .mb4;
   @extend .w-third-ns;
   @extend .f2;
   @extend .tc-ns;
@@ -547,11 +554,10 @@ html {
 }
 
 .icon-guide__title {
-  @extend .love-potion;
-  @extend .ma0;
   @extend .ml2;
   @extend .dib;
-  @extend .f2;
+  @extend .section-sub-header;
+  @extend .mb3;
 }
 
 @media (--breakpoint-not-small) {
@@ -607,10 +613,9 @@ html {
 }
 
 .image-highlight__title {
-  @extend .love-potion;
-  @extend .f2;
   @extend .mv3;
   @extend .mt0-ns;
+  @extend .section-sub-header;
 }
 
 .timeline-entry {
@@ -619,9 +624,7 @@ html {
 }
 
 .timeline-entry__header {
-  @extend .love-potion;
-  @extend .ma0;
-  @extend .f2;
+  @extend .mv3;
   @extend .w-third-ns;
   @extend .tc-ns;
   @extend .mr4-ns;
@@ -635,8 +638,14 @@ html {
 }
 
 .timeline-entry__time {
+  @extend .love-potion;
+  @extend .f2;
   @extend .db-ns;
   @extend .f1-ns;
+}
+
+.timeline-entry__event {
+  @extend .section-sub-header;
 }
 
 .timeline-entry__time::after {
