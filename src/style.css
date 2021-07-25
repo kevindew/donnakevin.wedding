@@ -113,7 +113,7 @@ html {
   max-width: 32rem;
   margin: auto;
   display: block;
-  margin-bottom: var(--spacing-medium);
+  margin-bottom: var(--spacing-large);
 }
 
 .wrapper {
@@ -123,7 +123,7 @@ html {
 }
 
 .pane {
-  padding: 4rem 1rem 3rem;
+  padding: 4rem 1rem 2rem;
 }
 
 .pane--white {
@@ -312,7 +312,6 @@ html {
   @extend .f1;
   @extend .lh-title;
   @extend .ma0;
-  @extend .mb4;
 }
 
 .section-sub-header {
@@ -328,8 +327,6 @@ html {
   @extend .f5;
   @extend .f4-ns;
   @extend .fs-normal;
-
-  margin: 0 0 1.25em;
 }
 
 .button,
@@ -543,7 +540,7 @@ html {
 
 .icon-guide {
   @extend .flex-ns;
-  @extend .mb4;
+  @extend .mb5;
 }
 
 .icon-guide__header {
@@ -551,11 +548,13 @@ html {
   @extend .f2;
   @extend .tc;
   @extend .mr4-ns;
+  @extend .mb4;
+  @extend .mb0-ns;
 }
 
 .icon-guide__title {
   @extend .section-sub-header;
-  @extend .mb3;
+  @extend .ma0;
 }
 
 @media (--breakpoint-not-small) {
@@ -568,6 +567,8 @@ html {
 
 /* Double specificity is needed to override font-awesome style */
 .icon-guide__icon.icon-guide__icon {
+  @extend .mb4;
+
   width: 4rem;
   height: 4rem;
 }
@@ -581,12 +582,13 @@ html {
 
 .image-highlight {
   @extend .flex-ns;
-  @extend .mb4;
+  @extend .mb5;
 }
 
 .image-highlight__image-container {
   @extend .w-third-ns;
   @extend .mr4-ns;
+  @extend .mb4;
 
   text-align: center;
 }
@@ -605,31 +607,32 @@ html {
 }
 
 .image-highlight__title {
-  @extend .mv3;
-  @extend .mt0-ns;
+  @extend .mt0;
+  @extend .mb4;
   @extend .section-sub-header;
 }
 
 .timeline-entry {
-  @extend .mb4;
+  @extend .mb5;
   @extend .flex-ns;
 }
 
 .timeline-entry__header {
-  @extend .mv3;
-  @extend .mt0-ns;
   @extend .w-third-ns;
   @extend .tc;
   @extend .mr4-ns;
+  @extend .mt0;
+  @extend .mb4;
+  @extend .mb0-ns;
 }
 
 .timeline-entry__copy {
   @extend .section-copy;
   @extend .w-two-thirds-ns;
   @extend .ml4-ns;
-  @extend .mv0-ns;
   @extend .tc;
   @extend .tl-ns;
+  @extend .mt0;
 }
 
 .timeline-entry__time {
@@ -637,10 +640,12 @@ html {
   @extend .f2;
   @extend .db;
   @extend .f1-ns;
+  @extend .mb2;
 }
 
 .timeline-entry__event {
   @extend .f4;
+  @extend .mb4;
 
   font-weight: normal;
   text-transform: uppercase;
