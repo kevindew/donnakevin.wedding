@@ -34,58 +34,54 @@ svgCore.library.add(icons.fas)
   </head>
   <body class="titillium-web text-grey">
     <header>
+      <div class="page-nav" id="nav">
+        <a href="#nav"
+           class="page-nav__link page-nav__link--trigger"
+           aria-hidden="true">
+          Menu
+        </a>
+        <nav class="page-nav__nav">
+          <ul class="page-nav__list">
+            <li class="page-nav__item">
+              <a href="#details" class="page-nav__link">
+                Details
+              </a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#how-to-get-there" class="page-nav__link">
+                How to get there
+              </a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#places-to-stay" class="page-nav__link">
+                Places to stay
+              </a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#on-the-day" class="page-nav__link">
+                On the day
+              </a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#gifts" class="page-nav__link">
+                Gifts
+              </a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#rsvp" class="page-nav__link">
+                RSVP
+              </a>
+            </li>
+            <li class="page-nav__item page-nav__item--collapsed">
+              <a href="mailto:help@donnakevin.wedding" class="page-nav__link">
+                Contact us
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <div class="pane pane--silver-grey">
         <div class="wrapper">
-          <div class="page-nav" id="nav">
-            <a href="#nav"
-               class="page-nav__trigger"
-               tabindex="-1"
-               aria-hidden="true">
-              <%= svgCore.icon(
-                    { iconName: 'bars' },
-                    { styles: { width: '100%', height: 'auto' } }
-                  ).html %>
-            </a>
-            <nav class="page-nav__nav">
-              <ul class="page-nav__list">
-                <li class="page-nav__item">
-                  <a href="#details" class="page-nav__link">
-                    Details
-                  </a>
-                </li>
-                <li class="page-nav__item">
-                  <a href="#how-to-get-there" class="page-nav__link">
-                    How to get there
-                  </a>
-                </li>
-                <li class="page-nav__item">
-                  <a href="#places-to-stay" class="page-nav__link">
-                    Places to stay
-                  </a>
-                </li>
-                <li class="page-nav__item">
-                  <a href="#on-the-day" class="page-nav__link">
-                    On the day
-                  </a>
-                </li>
-                <li class="page-nav__item">
-                  <a href="#gifts" class="page-nav__link">
-                    Gifts
-                  </a>
-                </li>
-                <li class="page-nav__item">
-                  <a href="#rsvp" class="page-nav__link">
-                    RSVP
-                  </a>
-                </li>
-                <li class="page-nav__item">
-                  <a href="mailto:help@donnakevin.wedding" class="page-nav__link">
-                    Contact us
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
           <h1 class="ma0">
             <img src="<%= require('./images/logo-512.png') %>"
                  srcset="<%= require('./images/logo-512.png') %>,

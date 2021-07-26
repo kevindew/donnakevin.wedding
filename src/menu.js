@@ -1,11 +1,11 @@
 const pageNav = document.querySelector('.page-nav')
 
-document.querySelector('.page-nav__trigger').addEventListener('click', (event) => {
+document.querySelector('.page-nav__link--trigger').addEventListener('click', (event) => {
   event.preventDefault()
   pageNav.classList.toggle('page-nav--open')
 })
 
-for (const navLink of document.querySelectorAll('.page-nav__link')) {
+for (const navLink of document.querySelectorAll('.page-nav__link:not(.page-nav__link--trigger)')) {
   navLink.addEventListener('focus', (event) => {
     pageNav.classList.add('page-nav--open')
   })

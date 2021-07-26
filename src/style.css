@@ -387,120 +387,20 @@ html {
 }
 
 .page-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 14rem;
-  z-index: 1;
-}
-
-@media screen and (min-width: 48em) {
-  .page-nav {
-    right: 50%;
-    transform: translateX(24rem);
-  }
-}
-
-.page-nav__nav {
   background-color: white;
-  height: 0;
-  max-height: 100vh;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  height: 3rem;
   overflow: hidden;
   transition: height var(--default-transition);
-  border-radius: 0 0 0 0.5rem;
 }
 
-.page-nav__nav::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-  transition: box-shadow var(--default-transition);
-  border-radius: 0 0 0 0.5rem;
-}
-
-.page-nav--open .page-nav__nav,
-.page-nav:target .page-nav__nav {
-  /* this is a bit of a bodge to get an animatable height: auto, 7 is number of
-   * items in the nav */
-  height: 21rem;
-  overflow-y: auto;
-}
-
-/* This is used to fix a rather unsightly scroll bar during animations on
- * windows machines */
-@media screen and (min-height: 21em) {
-  .page-nav--open .page-nav__nav,
-  .page-nav:target .page-nav__nav {
-    overflow-y: hidden;
-  }
-}
-
-.page-nav--open .page-nav__nav::before,
-.page-nav:target .page-nav__nav::before {
-  box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.2);
-}
-
-.page-nav__trigger {
-  box-sizing: content-box;
-  color: var(--text-grey);
-  outline: 0;
-  position: absolute;
-  right: 0;
-  bottom: -3.125rem;
-  height: 1.75rem;
-  width: 1.75rem;
-  padding: 0.5rem 0.875rem 0.875rem;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.75);
-  transition: color var(--default-transition);
-  transition: background-color var(--default-transition);
-  border-radius: 0 0 0 0.5rem;
-}
-
-.page-nav__trigger::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-  transition: box-shadow var(--default-transition);
-  border-radius: 0 0 0 0.5rem;
-}
-
-@media (--breakpoint-not-small) {
-  .page-nav__trigger {
-    border-radius: 0 0 0.5rem 0.5rem;
-  }
-
-  .page-nav__trigger::before {
-    border-radius: 0 0 0.5rem 0.5rem;
-  }
-}
-
-.page-nav__trigger:hover {
-  color: var(--earth-green);
-}
-
-.page-nav__trigger:hover::before {
-  box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.2);
-}
-
-.page-nav--open .page-nav__trigger,
-.page-nav:target .page-nav__trigger {
-  background-color: white;
-}
-
-.page-nav--open .page-nav__trigger::before,
-.page-nav:target .page-nav__trigger::before,
-.page-nav--open .page-nav__trigger:hover::before,
-.page-nav:target .page-nav__trigger:hover::before {
-  box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.2);
+.page-nav--open,
+.page-nav:target {
+  height: 100vh;
+  overflow: auto;
 }
 
 .page-nav__list {
@@ -515,15 +415,16 @@ html {
 }
 
 .page-nav__link {
-  box-sizing: content-box;
-  display: block;
-  font-size: 1.25rem;
-  outline: 0;
-  text-align: center;
-  padding: 0.75rem 1.5rem 1rem;
-  height: 1.25rem;
+  line-height: 3;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   transition: color var(--default-transition);
-  transition: background-color var(--default-transition);
+  padding: 0 2rem;
+  outline-color: var(--earth-green);
+}
+
+.page-nav__link--trigger {
+  font-weight: bold;
 }
 
 .page-nav__link:link,
@@ -533,9 +434,41 @@ html {
 }
 
 .page-nav__link:hover,
-.page-nav__link:focus {
-  color: white;
-  background-color: var(--earth-green);
+.page-nav__link:focus,
+.page-nav__link:active {
+  color: var(--earth-green);
+  text-decoration: none;
+}
+
+@media (--breakpoint-large) {
+  .page-nav {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .page-nav--open,
+  .page-nav:target {
+    height: auto;
+  }
+
+  .page-nav__list {
+    @extend .flex;
+    @extend .justify-around;
+    @extend .mw9;
+
+    margin: auto;
+  }
+
+  .page-nav__item--collapsed {
+    display: none;
+  }
+
+  .page-nav__link {
+    padding: 0 0.5rem;
+  }
+
+  .page-nav__link--trigger {
+    display: none;
+  }
 }
 
 .icon-guide {
