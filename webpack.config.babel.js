@@ -8,6 +8,7 @@ import TerserJsPlugin from 'terser-webpack-plugin'
 export default (_env, argv) => {
   return {
     entry: './src/main.js',
+    target: 'web', // needed to fix HMR bug: https://github.com/webpack/webpack-dev-server/issues/2758
     output: {
       path: path.join(__dirname, '/dist'),
       filename: '[name].[contenthash].js',
