@@ -110,10 +110,16 @@ html {
 
 .hero-image {
   width: 100%;
-  max-width: 32rem;
+  max-width: 36rem;
   margin: auto;
   display: block;
   margin-bottom: var(--spacing-large);
+}
+
+@media (--breakpoint-large) {
+  .hero-image {
+    max-width: min(48rem, 50vw);
+  }
 }
 
 .wrapper {
@@ -122,8 +128,19 @@ html {
   padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
 }
 
+.wrapper--wide {
+  max-width: 96rem;
+}
+
 .pane {
   padding: 4rem 1rem 2rem;
+}
+
+.pane--hero {
+  min-height: min(96rem, 100vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .pane--white {
