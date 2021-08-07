@@ -82,15 +82,17 @@ svgCore.library.add(icons.fas)
         </nav>
       </div>
       <div class="pane pane--hero pane--silver-grey">
-        <div class="wrapper wrapper--wide">
-          <h1 class="ma0">
-            <img src="<%= require('./images/logo.jpg') %>"
-                 srcset="<%= require('./images/logo.jpg') %>,
-                         <%= require('./images/logo.2x.jpg') %> 2x,
-                         <%= require('./images/logo.3x.jpg') %> 3x"
-                 alt="Donna &amp; Kevin - 29.10.21"
-                 class="hero-image">
-          </h1>
+        <div><!-- needed for IE11 to flex centrally :-/ -->
+          <div class="wrapper wrapper--wide">
+            <h1 class="ma0">
+              <img src="<%= require('./images/logo.jpg') %>"
+                   srcset="<%= require('./images/logo.jpg') %>,
+                           <%= require('./images/logo.2x.jpg') %> 2x,
+                           <%= require('./images/logo.3x.jpg') %> 3x"
+                   alt="Donna &amp; Kevin - 29.10.21"
+                   class="hero-image">
+            </h1>
+          </div>
         </div>
       </div>
     </header>

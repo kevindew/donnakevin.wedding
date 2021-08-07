@@ -118,6 +118,7 @@ html {
 
 @media (--breakpoint-large) {
   .hero-image {
+    max-width: 48rem;
     max-width: min(48rem, 50vw);
   }
 }
@@ -126,6 +127,7 @@ html {
   margin: auto;
   max-width: 48rem;
   padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  border: 1px solid red;
 }
 
 .wrapper--wide {
@@ -137,6 +139,7 @@ html {
 }
 
 .pane--hero {
+  min-height: 100vh;
   min-height: min(96rem, 100vh);
   display: flex;
   flex-direction: column;
