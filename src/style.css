@@ -127,7 +127,6 @@ html {
   margin: auto;
   max-width: 48rem;
   padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
-  border: 1px solid red;
 }
 
 .wrapper--wide {
