@@ -146,74 +146,76 @@ svgCore.library.add(icons.fas)
         </div>
       </div>
       <div class="pane pane--peach" id="how-to-get-there">
-        <div class="wrapper">
+        <div class="wrapper wrapper--wide">
           <h2 class="section-header tc mt3 mb5">How to get there</h2>
-          <div class="icon-guide">
-            <div class="icon-guide__header">
-              <%= svgCore.icon({ iconName: 'car' }, { classes: ['icon-guide__icon'] }).html %>
-              <h3 class="icon-guide__title">Car</h3>
+          <div class="flex-l justify-around">
+            <div class="icon-guide">
+              <div class="icon-guide__header">
+                <%= svgCore.icon({ iconName: 'car' }, { classes: ['icon-guide__icon'] }).html %>
+                <h3 class="icon-guide__title">Car</h3>
+              </div>
+              <div class="icon-guide__body">
+                <p class="section-copy mt0">
+                  For sat navs the postcode is HG3 1JH, otherwise directions are
+                  available from
+                  <a href="https://www.google.com/maps/dir//Rudding+Park,+Rudding+Ln,+Follifoot,+Harrogate+HG3+1JH/@53.973493,-1.5624097,12z/data=!4m13!4m12!1m0!1m5!1m1!1s0x4879519a142cdf57:0xcdaaafbf8e064753!2m2!1d-1.4923703!2d53.9735134!2m3!6e1!7e2!8j1585389600!3e0"
+                     target="_blank"
+                     class="link">Google Maps</a> or
+                  <a href="https://www.ruddingpark.co.uk/find-us/"
+                     target="_blank"
+                     class="link">Rudding Park</a>.
+                </p>
+                <p class="section-copy">
+                  Once near the venue be careful to take the turning signposted
+                  to the hotel as there are different entrances for the golf
+                  course and holiday park that share Rudding Park.
+                </p>
+                <p class="section-copy">
+                  There is ample parking at the venue.
+              </div>
             </div>
-            <div class="icon-guide__body">
-              <p class="section-copy mt0">
-                For sat navs the postcode is HG3 1JH, otherwise directions are
-                available from
-                <a href="https://www.google.com/maps/dir//Rudding+Park,+Rudding+Ln,+Follifoot,+Harrogate+HG3+1JH/@53.973493,-1.5624097,12z/data=!4m13!4m12!1m0!1m5!1m1!1s0x4879519a142cdf57:0xcdaaafbf8e064753!2m2!1d-1.4923703!2d53.9735134!2m3!6e1!7e2!8j1585389600!3e0"
-                   target="_blank"
-                   class="link">Google Maps</a> or
-                <a href="https://www.ruddingpark.co.uk/find-us/"
-                   target="_blank"
-                   class="link">Rudding Park</a>.
-              </p>
-              <p class="section-copy">
-                Once near the venue be careful to take the turning signposted
-                to the hotel as there are different entrances for the golf
-                course and holiday park that share Rudding Park.
-              </p>
-              <p class="section-copy">
-                There is ample parking at the venue.
+            <div class="icon-guide">
+              <div class="icon-guide__header">
+                <%= svgCore.icon({ iconName: 'subway' }, { classes: ['icon-guide__icon'] }).html %>
+                <h3 class="icon-guide__title">Public transport</h3>
+              </div>
+              <div class="icon-guide__body">
+                <p class="section-copy mt0">
+                  The venue cannot be reached directly by public transport. We
+                  recommend travelling by train to
+                  <a href="https://www.google.com/maps/dir//Harrogate,+Station+Parade,+Harrogate/@53.9956745,-1.595215,12z/data=!4m13!4m12!1m0!1m5!1m1!1s0x487953e0b71ea39d:0x7586b6eb5e77a53b!2m2!1d-1.5376973!2d53.9927115!2m3!6e1!7e2!8j1585335600!3e3"
+                     target="_blank"
+                     class="link">Harrogate</a>
+                  and using a taxi to reach the venue, which is a 15 minute drive
+                  and should cost approximately £10.
+                </p>
+                <p class="section-copy">
+                  Trains from London depart from Kings Cross and tend to involve
+                  a change at York. Tickets can be purchased from
+                  <a href="https://www.lner.co.uk" class="link">lner.co.uk</a>,
+                  they tend to be available 3 months before the travel date
+                  and are cheaper the earlier you book.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="icon-guide">
-            <div class="icon-guide__header">
-              <%= svgCore.icon({ iconName: 'subway' }, { classes: ['icon-guide__icon'] }).html %>
-              <h3 class="icon-guide__title">Public transport</h3>
-            </div>
-            <div class="icon-guide__body">
-              <p class="section-copy mt0">
-                The venue cannot be reached directly by public transport. We
-                recommend travelling by train to
-                <a href="https://www.google.com/maps/dir//Harrogate,+Station+Parade,+Harrogate/@53.9956745,-1.595215,12z/data=!4m13!4m12!1m0!1m5!1m1!1s0x487953e0b71ea39d:0x7586b6eb5e77a53b!2m2!1d-1.5376973!2d53.9927115!2m3!6e1!7e2!8j1585335600!3e3"
-                   target="_blank"
-                   class="link">Harrogate</a>
-                and using a taxi to reach the venue, which is a 15 minute drive
-                and should cost approximately £10.
-              </p>
-              <p class="section-copy">
-                Trains from London depart from Kings Cross and tend to involve
-                a change at York. Tickets can be purchased from
-                <a href="https://www.lner.co.uk" class="link">lner.co.uk</a>,
-                they tend to be available 3 months before the travel date
-                and are cheaper the earlier you book.
-              </p>
-            </div>
-          </div>
-          <div class="icon-guide">
-            <div class="icon-guide__header">
-              <%= svgCore.icon({ iconName: 'taxi' }, { classes: ['icon-guide__icon'] }).html %>
-              <h3 class="icon-guide__title">Local Taxis</h3>
-            </div>
-            <div class="icon-guide__body">
-              <p class="section-copy mt0">
-                We have been recommend
-                <a href="http://bluelinetaxis.co.uk/"
-                   class="link">Blue Line Taxis</a> as a local firm that
-                regularly serve the venue, they can be contacted on
-                <a href="tel:01423530830" class="link">01423&nbsp;530830</a>.
-              </p>
-              <p class="section-copy">
-                We recommend you pre-book with them if you need a taxi to
-                return home after the wedding.
-              </p>
+            <div class="icon-guide">
+              <div class="icon-guide__header">
+                <%= svgCore.icon({ iconName: 'taxi' }, { classes: ['icon-guide__icon'] }).html %>
+                <h3 class="icon-guide__title">Local Taxis</h3>
+              </div>
+              <div class="icon-guide__body">
+                <p class="section-copy mt0">
+                  We have been recommend
+                  <a href="http://bluelinetaxis.co.uk/"
+                     class="link">Blue Line Taxis</a> as a local firm that
+                  regularly serve the venue, they can be contacted on
+                  <a href="tel:01423530830" class="link">01423&nbsp;530830</a>.
+                </p>
+                <p class="section-copy">
+                  We recommend you pre-book with them if you need a taxi to
+                  return home after the wedding.
+                </p>
+              </div>
             </div>
           </div>
         </div>

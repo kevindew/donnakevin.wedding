@@ -489,30 +489,31 @@ html {
 }
 
 .icon-guide {
-  @extend .flex-ns;
+  @extend .w-two-thirds-l;
   @extend .mb5;
+  @extend .mh4-l;
+  @extend .flex-ns;
+}
+
+@media (--breakpoint-large) {
+  .icon-guide {
+    /* this is needed to override display flex at exactly 960px */
+    display: block;
+    max-width: 22em;
+  }
 }
 
 .icon-guide__header {
-  @extend .w-third-ns;
+  @extend .w-third-m;
+  @extend .w-auto-l;
   @extend .f2;
   @extend .tc;
-  @extend .mr4-ns;
   @extend .mb4;
-  @extend .mb0-ns;
 }
 
 .icon-guide__title {
   @extend .section-sub-header;
   @extend .ma0;
-}
-
-@media (--breakpoint-not-small) {
-  .icon-guide__title {
-    @extend .ml2;
-
-    margin-left: 0;
-  }
 }
 
 /* Double specificity is needed to override font-awesome style */
@@ -524,10 +525,13 @@ html {
 }
 
 .icon-guide__body {
-  @extend .w-two-thirds-ns;
-  @extend .ml4-ns;
+  @extend .w-two-thirds-m;
+  @extend .w-auto-l;
+  @extend .ml4-m;
+  @extend .ml0-l;
   @extend .tc;
-  @extend .tl-ns;
+  @extend .tl-m;
+  @extend .tc-l;
 }
 
 .image-highlight {
