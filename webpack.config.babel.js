@@ -111,6 +111,25 @@ export default (_env, argv) => {
         }
       }),
       new ImageMinimizerPlugin({
+        test: /\.3x\.(jpe?g|png)$/i,
+        minimizerOptions: {
+          plugins: [
+            ['mozjpeg', { quality: 33 }],
+            ['pngquant', { quality: [0.3, 0.5] }]
+          ]
+        }
+      }),
+      new ImageMinimizerPlugin({
+        test: /\.2x\.(jpe?g|png)$/i,
+        minimizerOptions: {
+          plugins: [
+            ['mozjpeg', { quality: 50 }],
+            ['pngquant', { quality: [0.4, 0.6] }]
+          ]
+        }
+      }),
+      new ImageMinimizerPlugin({
+        test: /[^.\dx].(jpe?g|png)$/i,
         minimizerOptions: {
           plugins: ['mozjpeg', 'pngquant']
         }
