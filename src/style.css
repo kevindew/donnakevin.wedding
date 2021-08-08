@@ -523,7 +523,7 @@ html {
   .icon-guide {
     /* this is needed to override display flex at exactly 960px */
     display: block;
-    max-width: 22em;
+    max-width: 24em;
   }
 }
 
@@ -569,7 +569,7 @@ html {
   .image-highlight {
     /* this is needed to override display flex at exactly 960px */
     display: block;
-    max-width: 22em;
+    max-width: 24em;
   }
 }
 
