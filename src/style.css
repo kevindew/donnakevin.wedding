@@ -113,7 +113,6 @@ html {
   max-width: 36rem;
   margin: auto;
   display: block;
-  margin-bottom: var(--spacing-large);
 }
 
 @media (--breakpoint-large) {
@@ -133,16 +132,29 @@ html {
   max-width: 96rem;
 }
 
-.pane {
+.pane,
+.wrapper--hero { /* hero padding applied for IOS Safari hack */
   padding: 4rem 1rem 2rem;
 }
 
 .pane--hero {
   min-height: 100vh;
   min-height: min(96rem, 100vh);
+  padding: 0; /* removed to accomodate IOS Safari hack */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+/* Hack to set the min-height to not include the browser controls in IOS
+ * Safari. This fixes the initial splash looking off centre.
+ * Hack from: https://github.com/postcss/postcss-100vh-fix
+ */
+@supports (-webkit-touch-callout: none) {
+  .pane--hero {
+    min-height: -webkit-fill-available;
+  }
 }
 
 .pane--white {
