@@ -82,7 +82,7 @@ function validateRsvp () {
     const nameError = document.createElement('label')
     nameError.setAttribute('for', name.id)
     nameError.classList.add('form__error')
-    nameError.textContent = 'Plese fill in this field'
+    nameError.textContent = 'Please fill in this field'
     name.parentNode.appendChild(nameError)
 
     valid = false
