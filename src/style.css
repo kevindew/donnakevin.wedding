@@ -157,6 +157,16 @@ html {
   }
 }
 
+/* Hack to fix veritcal centre alignment in IE 11. An element can't be aligned
+ * centrally on an elemnt with min-height unless there is a height.
+ * See: https://github.com/philipwalton/flexbugs/issues/231
+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .pane--hero {
+    height: 0;
+  }
+}
+
 .pane--white {
   background-color: #fff;
 }
