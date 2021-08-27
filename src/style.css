@@ -452,7 +452,7 @@ html {
 
 .page-nav__item {
   margin: 0;
-  padding: 0;
+  padding: 0 2rem;
 }
 
 .page-nav__link {
@@ -460,7 +460,6 @@ html {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   transition: color var(--default-transition);
-  padding: 0 2rem;
   outline-color: var(--earth-green);
 }
 
@@ -503,7 +502,7 @@ html {
     display: none;
   }
 
-  .page-nav__link {
+  .page-nav__item {
     padding: 0 0.5rem;
   }
 
@@ -641,4 +640,17 @@ html {
 
   font-weight: normal;
   text-transform: uppercase;
+}
+
+.rules {
+  @extend .mv4;
+  @extend .pv3;
+  @extend .ph4;
+  @extend .section-copy;
+
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.rules__list-item {
+  @extend .mv2;
 }

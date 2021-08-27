@@ -63,6 +63,11 @@ svgCore.library.add(icons.fas)
                 On the day
               </a>
             </li>
+            <li class="page-nav__item page-nav__item--collapsed">
+              <a href="#coronavirus" class="page-nav__link">
+                Coronavirus
+              </a>
+            </li>
             <li class="page-nav__item">
               <a href="#gifts" class="page-nav__link">
                 Gifts
@@ -401,6 +406,57 @@ svgCore.library.add(icons.fas)
               to party until the end.
             </p>
           </div>
+
+        </div>
+      </div>
+      <div class="pane" id="coronavirus">
+        <div class="wrapper">
+          <h2 class="section-header tc mt3 mb5">Coronavirus</h2>
+          <p class="section-copy tc">
+            We want everyone to enjoy themselves safely at our wedding, we
+            therefore ask guests to take responsible steps to reduce the
+            risks of spreading the virus.
+          </p>
+
+          <div class="rules">
+            <p>
+              We ask attendees to:
+            </p>
+            <ul class="rules__list">
+              <li class="rules__list-item">
+                follow the
+                <a href="https://www.ruddingpark.co.uk/covid-policy-21/" class="link">venue's coronavirus policy</a>,
+                which includes wearing a mask when moving around the venue and
+                a temperature check on arrival
+              </li>
+              <li class="rules__list-item">
+                <!-- be respectful of other guests and provide them with adequate space -->
+                be considerate towards other guests - who may be taking a
+                cautious approach to contact - and provide them with adequate space
+              </li>
+              <li class="rules__list-item">
+                consider taking a
+                <a href="https://www.gov.uk/order-coronavirus-rapid-lateral-flow-tests" class="link">rapid flow test</a>
+                before attending
+              </li>
+              <li class="rules__list-item">
+                not attend if they have
+                recently tested positive for coronavirus or are experiencing
+                any symptoms
+              </li>
+            </ul>
+          </div>
+
+          <p class="section-copy tc">
+            If the weather is suitable we will make use of outdoor space for
+            some of the social parts of the day. The indoor aspects of the
+            day will take place in large and well ventilated rooms.
+          </p>
+
+          <p class="section-copy tc mb5">
+            If you have any questions or concerns, please
+            <a href="mailto:help@donnakevin.wedding" class="link">contact us.</a>
+          </p>
         </div>
       </div>
       <div class="pane pane--leaves" id="gifts">
@@ -436,8 +492,10 @@ svgCore.library.add(icons.fas)
       <div class="pane pane--silver-grey pane--rsvp" id="rsvp">
         <div class="wrapper">
           <h2 class="section-header tc mt3 mb5">RSVP</h2>
-          <p class="section-copy tc mb5">
-            Please let us know if you can attend (again) by the 18th September 2021.
+          <p class="section-copy tc mb5 w-80-ns center">
+            Please let us know if you can attend (again) by the 18th September 2021
+            and, if you can attend, please read the
+            <a href="#coronavirus" class="link">coronavirus information</a>.
           </p>
           <form method="post"
                 action="https://i4z9ijbyol.execute-api.eu-west-1.amazonaws.com/default/rsvp"
