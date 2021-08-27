@@ -15,7 +15,7 @@
 @import 'tachyons/src/_visibility';
 @import 'tachyons/src/_widths';
 @import 'tachyons/src/_media-queries';
-@import 'styles/fonts';
+@import 'fonts';
 
 :root {
   --sand: #fbf6e2;
