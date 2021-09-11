@@ -10,7 +10,12 @@ jobs:
         with:
           node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
           cache: 'npm'
-          cache-dependency-path: package-lock.json
+          cache-dependency-path: '**/package-lock.json'
+      - name: Test RSVP function
+        working-directory: lambda/rsvp
+        run: |
+          npm ci
+          npm test
       - run: npm ci
       - run: npm run lint
       - run: npm run build
