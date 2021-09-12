@@ -55,7 +55,7 @@ ${comment}
     return {
       statusCode: 204,
       headers: {
-        'Access-Control-Allow-Headers': '*',
+        'Access-Control-Allow-Headers': 'Accept,Content-Type',
         'Access-Control-Allow-Origin': '*'
       }
     }

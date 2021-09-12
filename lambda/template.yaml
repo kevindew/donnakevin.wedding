@@ -12,7 +12,7 @@ Globals:
   Api:
     Cors:
       AllowOrigin: "'*'"
-      AllowHeaders: "'*'"
+      AllowHeaders: "'Accept,Content-Type'"
 
 Resources:
   RsvpFunction:
