@@ -56,6 +56,12 @@ test('sends an email and returns a 204 for a JSON request', async () => {
   })
 })
 
+test('copes with a lowercase Content-Type header for a JSON request', async () => {
+  const response = await handler({
+    body: JSON.stringify(submission),
+    headers: { 'content-type': 'application/json' }
+  })
+
   expect(response).toMatchObject({ statusCode: 204 })
 })
 

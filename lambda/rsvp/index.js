@@ -3,7 +3,10 @@ const SES = require('aws-sdk/clients/ses')
 
 exports.handler = async (event) => {
   let name, attend, guests, dietary, comment
-  const json = event.headers['Content-Type'] === 'application/json'
+
+  // in my testing I've experienced different header casings for different contexts :-(
+  const json = event.headers['Content-Type'] === 'application/json' ||
+    event.headers['content-type'] === 'application/json'
 
   if (json) {
     ({ name, attend, guests, dietary, comment } = JSON.parse(event.body))
