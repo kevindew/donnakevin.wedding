@@ -270,6 +270,7 @@ html {
   padding: var(--spacing-small);
   transition: box-shadow var(--default-transition);
   appearance: none;
+  line-height: normal;
 }
 
 .form__input-text:focus {
