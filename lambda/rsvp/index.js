@@ -49,7 +49,13 @@ ${comment}
   await ses.sendEmail(sesParams).promise()
 
   if (json) {
-    return { statusCode: 204 }
+    return {
+      statusCode: 204,
+      headers: {
+        'Access-Control-Allow-Headers': '*',
+        'Access-Control-Allow-Origin': '*'
+      }
+    }
   } else {
     return {
       statusCode: 303,

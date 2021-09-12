@@ -47,6 +47,15 @@ test('sends an email and returns a 204 for a JSON request', async () => {
   })
 
   expect(mockSes.sendEmail).toHaveBeenCalledWith(sesParams)
+  expect(response).toMatchObject({
+    statusCode: 204,
+    headers: {
+      'Access-Control-Allow-Headers': '*',
+      'Access-Control-Allow-Origin': '*'
+    }
+  })
+})
+
   expect(response).toMatchObject({ statusCode: 204 })
 })
 
