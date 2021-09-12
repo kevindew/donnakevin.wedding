@@ -25,6 +25,10 @@ Resources:
           Properties:
             Path: /rsvp
             Method: post
+      Policies:
+        - SESCrudPolicy: { IdentityName: donnakevin.wedding }
+        - SESCrudPolicy: { IdentityName: kevindew@me.com }
+        - SESCrudPolicy: { IdentityName: donna.carter72@yahoo.com }
 
 Outputs:
   RsvpApi:
