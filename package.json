@@ -53,6 +53,7 @@
   },
   "scripts": {
     "dev": "webpack serve --hot --mode=development",
+    "local-lambda": "sam local start-api -t lambda/template.yaml -n lambda/env.json",
     "build": "webpack --mode=production",
     "lint": "standard && stylelint 'src/**/*.css'"
   },
