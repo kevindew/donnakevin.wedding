@@ -30,6 +30,20 @@ Resources:
         - SESCrudPolicy: { IdentityName: kevindew@me.com }
         - SESCrudPolicy: { IdentityName: donna.carter72@yahoo.com }
 
+  GiftFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: gift/
+      Environment:
+        Variables:
+          STRIPE_API_KEY:
+      Events:
+        Rsvp:
+          Type: Api
+          Properties:
+            Path: /gift
+            Method: post
+
 Outputs:
   RsvpApi:
     Description: "API Gateway endpoint URL for RSVP function"
@@ -40,3 +54,12 @@ Outputs:
   RsvpFunctionIamRole:
     Description: "Implicit IAM Role created for RSVP function"
     Value: !GetAtt RsvpFunctionRole.Arn
+  GiftApi:
+    Description: "API Gateway endpoint URL for gift function"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/gift/"
+  GiftFunction:
+    Description: "Gift Lambda Function ARN"
+    Value: !GetAtt GiftFunction.Arn
+  GiftFunctionIamRole:
+    Description: "Implicit IAM Role created for gift function"
+    Value: !GetAtt GiftFunctionRole.Arn
