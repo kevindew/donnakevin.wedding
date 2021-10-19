@@ -480,17 +480,17 @@ svgCore.library.add(icons.fas)
                 honeymoon would be appreciated.
               </p>
               <div class="tc">
-                <a href="#gifts-form" class="button">
+                <a href="#gifts-form" class="button gifts-blurb__trigger">
                   Contribute
                 </a>
               </div>
-              </div>
+            </div>
             <form method="post"
                   action="http://127.0.0.1:3000/gift"
                   class="form gifts-form"
                   aria-hidden="true"
                   hidden>
-              <p class="section-copy tc">
+              <p class="section-copy tc mb5">
                 Thank you so much. Filling in this form will take you to
                 our payment provider. Alternatively, you can
                 <a href="mailto:help@donnakevin.wedding" class="link">contact us</a>
@@ -520,7 +520,7 @@ svgCore.library.add(icons.fas)
               <fieldset class="form__fieldset">
                 <div class="flex-ns">
                   <div class="form__info">
-                    <label for="gift-message" class="form__label">Include a message</label>
+                    <label for="gift-message" class="form__label">Your message</label>
                   </div>
                   <div class="form__field">
                     <textarea type="text"
@@ -534,7 +534,9 @@ svgCore.library.add(icons.fas)
                 <div class="flex-ns">
                   <div class="form__info">&nbsp;</div>
                   <div class="form__field">
-                    <button type="submit" class="button">Continue to card details</button>
+                    <button type="submit" class="button gifts-form__submit">Continue to card details</button>
+                    &nbsp;
+                    <a href="#gifts" class="link gifts-form__cancel">Cancel</a>
                   </div>
                 </div>
               </fieldset>
