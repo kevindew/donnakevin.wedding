@@ -198,11 +198,17 @@ html {
 }
 
 .pane--rsvp-thanks,
-.pane--rsvp-thanks:target ~ .pane--rsvp {
+.pane--rsvp-thanks:target ~ .pane--rsvp,
+.pane--gifts-thanks,
+.pane--gifts-thanks:target ~ .pane--gifts,
+.gifts-form,
+.gifts-form-target:target .gifts-blurb {
   display: none;
 }
 
-.pane--rsvp-thanks:target {
+.pane--rsvp-thanks:target,
+.pane--gifts-thanks:target,
+.gifts-form-target:target .gifts-form {
   display: block;
 }
 
@@ -276,6 +282,22 @@ html {
 .form__input-text:focus {
   outline: 0;
   box-shadow: 0 0 6px 2px rgba(var(--earth-green-rgb), 0.5);
+}
+
+.form__input-text--money {
+  width: 6em;
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+.form__input-prefix {
+  font-weight: bold;
+  border-radius: 0.5em 0 0 0.5em;
+  border: 2px solid var(--earth-green);
+  border-right: 0;
+  display: inline-block;
+  line-height: normal;
+  padding: var(--spacing-small) var(--spacing-medium);
+  background-color: var(--silver-grey);
 }
 
 .form__input-radio {

@@ -459,21 +459,87 @@ svgCore.library.add(icons.fas)
           </p>
         </div>
       </div>
-      <div class="pane pane--leaves" id="gifts">
+      <div class="pane pane--leaves pane--gifts-thanks" id="gifts-thanks" aria-hidden="true" hidden>
         <div class="wrapper">
           <div class="leaves-foreground pa4 mv4 center">
-            <h2 class="section-header tc mb5">Gifts</h2>
+            <h2 class="section-header tc mb5">Thank you</h2>
             <p class="section-copy tc mb5">
-              Please don’t feel obliged to buy us a gift, we know that
-              attending will be expensive and we’d just love to have you there.
-              If you do wish to give us something a contribution to our
-              honeymoon would be appreciated.
+              We're very grateful for your kind gift.
             </p>
-            <div class="tc">
-              <a href="https://www.paypal.com/pools/c/8h5fFec6PX" class="button">
-                Contribute
-              </a>
-            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pane pane--leaves pane--gifts" id="gifts">
+        <div class="wrapper gifts-form-target" id="gifts-form">
+          <div class="leaves-foreground pa4 mv4 center">
+            <h2 class="section-header tc mb5">Gifts</h2>
+            <div class="gifts-blurb">
+              <p class="section-copy tc mb5">
+                Please don’t feel obliged to buy us a gift, we know that
+                attending will be expensive and we’d just love to have you there.
+                If you do wish to give us something a contribution to our
+                honeymoon would be appreciated.
+              </p>
+              <div class="tc">
+                <a href="#gifts-form" class="button">
+                  Contribute
+                </a>
+              </div>
+              </div>
+            <form method="post"
+                  action="http://127.0.0.1:3000/gift"
+                  class="form gifts-form"
+                  aria-hidden="true"
+                  hidden>
+              <p class="section-copy tc">
+                Thank you so much. Filling in this form will take you to
+                our payment provider. Alternatively, you can
+                <a href="mailto:help@donnakevin.wedding" class="link">contact us</a>
+                to access our details for a different approach.
+              </p>
+              <fieldset class="form__fieldset">
+                <div class="flex-ns">
+                  <div class="form__info">
+                    <label for="gift-amount" class="form__label">Amount</label>
+                  </div>
+                  <div class="form__field">
+                    <div class="form__input-prefix">&pound;</div>
+                    <input type="number" min="1" step="any" name="amount" id="gift-amount" class="form__input-text form__input-text--money">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="form__fieldset">
+                <div class="flex-ns">
+                  <div class="form__info">
+                    <label for="gift-name" class="form__label">Who this is from</label>
+                  </div>
+                  <div class="form__field">
+                    <input type="text" name="name" id="gift-name" class="form__input-text">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="form__fieldset">
+                <div class="flex-ns">
+                  <div class="form__info">
+                    <label for="gift-message" class="form__label">Include a message</label>
+                  </div>
+                  <div class="form__field">
+                    <textarea type="text"
+                              name="message"
+                              id="gift-message"
+                              class="form__input-text h4"></textarea>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="form__fieldset">
+                <div class="flex-ns">
+                  <div class="form__info">&nbsp;</div>
+                  <div class="form__field">
+                    <button type="submit" class="button">Continue to card details</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
           </div>
         </div>
       </div>
