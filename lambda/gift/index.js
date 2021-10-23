@@ -12,7 +12,7 @@ exports.handler = async (event) => {
   const cancelQuery = querystring.stringify({ name, amount, message })
   const cancelUrl = `http://localhost:8080/?${cancelQuery}#gifts-form`
 
-  if (amount <= 0 || name.trim() === '') {
+  if (amount < 1 || name.trim() === '') {
     return { statusCode: 303, headers: { Location: cancelUrl } }
   }
 
