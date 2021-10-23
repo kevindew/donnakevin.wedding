@@ -503,7 +503,7 @@ svgCore.library.add(icons.fas)
                   </div>
                   <div class="form__field">
                     <div class="form__input-prefix">&pound;</div>
-                    <input type="number" min="1" step="any" name="amount" id="gift-amount" class="form__input-text form__input-text--money">
+                    <input type="text" inputmode="numeric" name="amount" id="gift-amount" class="form__input-text form__input-text--money" pattern="[0-9]*">
                   </div>
                 </div>
               </fieldset>
