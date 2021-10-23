@@ -376,6 +376,14 @@ html {
   box-shadow: 0 0 6px 2px rgba(var(--error-rgb), 0.5);
 }
 
+.gifts-form__submit {
+  margin-right: 1em;
+}
+
+.gifts-form__cancel {
+  line-height: 3;
+}
+
 .section-header {
   @extend .love-potion;
   @extend .f1;
