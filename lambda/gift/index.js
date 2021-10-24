@@ -10,7 +10,7 @@ exports.handler = async (event) => {
   const message = query.message || ''
 
   const cancelQuery = querystring.stringify({ name, amount, message })
-  const cancelUrl = `http://localhost:8080/?${cancelQuery}#gifts-form`
+  const cancelUrl = `https://donnakevin.wedding/?${cancelQuery}#gifts-form`
 
   if (amount < 1 || name.trim() === '') {
     return { statusCode: 303, headers: { Location: cancelUrl } }
@@ -19,7 +19,7 @@ exports.handler = async (event) => {
   const description = [message.trim(), name.trim()].filter(p => p !== '').join(' - ')
 
   const session = await stripe.checkout.sessions.create({
-    success_url: 'http://localhost:8080/#gifts-thanks',
+    success_url: 'https://donnakevin.wedding/#gifts-thanks',
     cancel_url: cancelUrl,
     payment_method_types: ['card'],
     mode: 'payment',
