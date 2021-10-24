@@ -36,7 +36,7 @@ Resources:
       CodeUri: gift/
       Environment:
         Variables:
-          STRIPE_API_KEY:
+          STRIPE_API_KEY: '{{resolve:secretsmanager:donnakevin.wedding:SecretString:STRIPE_API_KEY}}'
       Events:
         Rsvp:
           Type: Api
