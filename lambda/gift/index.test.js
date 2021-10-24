@@ -53,3 +53,33 @@ test('it creates a stripe session with the normalised parameters', async () => {
     }]
   }))
 })
+
+test('it rejects an invalid amount', async () => {
+  const query = querystring.stringify({
+    amount: 'blah',
+    name: 'Steve'
+  })
+  const response = await handler({ body: query })
+
+  expect(response).toMatchObject({ statusCode: 303, headers: { Location: 'https://donnakevin.wedding/?amount=0&name=Steve&message=#gifts-form' } })
+})
+
+test('it rejects an amount less than 1', async () => {
+  const query = querystring.stringify({
+    amount: '0.55',
+    name: 'Steve'
+  })
+  const response = await handler({ body: query })
+
+  expect(response).toMatchObject({ statusCode: 303, headers: { Location: 'https://donnakevin.wedding/?amount=0.55&name=Steve&message=#gifts-form' } })
+})
+
+test('it rejects an empty name', async () => {
+  const query = querystring.stringify({
+    amount: '12',
+    name: '  '
+  })
+  const response = await handler({ body: query })
+
+  expect(response).toMatchObject({ statusCode: 303, headers: { Location: 'https://donnakevin.wedding/?amount=12&name=&message=#gifts-form' } })
+})
