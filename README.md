@@ -7,6 +7,11 @@ Wedding website for the marriage of
 [Kevin Dew](https://github.com/kevindew) which took place on the
 29th October 2021 (after a couple of pandemic setbacks).
 
+The website is now in an archive state with the dynamic functionality (provided
+by AWS Lambda functions) removed - this was because they were quite the target
+of spam bots. At some point we'll free the domain up for future Donna's and
+Kevin's to use for a marriage and move to hosting on GitHub pages.
+
 ## Running locally
 
 Before running you'll need to have [nvm](https://github.com/nvm-sh/nvm)
