@@ -458,12 +458,12 @@ svgCore.library.add(icons.fas)
           </p>
         </div>
       </div>
-      <div class="pane pane--leaves pane--gifts-thanks" id="gifts-thanks" aria-hidden="true" hidden>
+      <div class="pane pane--leaves pane--gifts-over" id="gifts-over" aria-hidden="true" hidden>
         <div class="wrapper">
           <div class="leaves-foreground pa4 mv4 center">
             <h2 class="section-header tc mb5">Thank you</h2>
             <p class="section-copy tc mb5">
-              We're very grateful for your kind gift.
+              We’re grateful for the thought, but the wedding was ages ago so you’re probably a bot.
             </p>
           </div>
         </div>
@@ -485,8 +485,8 @@ svgCore.library.add(icons.fas)
                 </a>
               </div>
             </div>
-            <form method="post"
-                  action="https://naypo2lfqe.execute-api.eu-west-1.amazonaws.com/Prod/gift/"
+            <form method="get"
+                  action="#gifts-over"
                   class="form gifts-form"
                   aria-hidden="true"
                   hidden>
@@ -543,15 +543,11 @@ svgCore.library.add(icons.fas)
           </div>
         </div>
       </div>
-      <div class="pane pane--silver-grey pane--rsvp-thanks" id="rsvp-thanks" aria-hidden="true" hidden>
+      <div class="pane pane--silver-grey pane--rsvp-over" id="rsvp-over" aria-hidden="true" hidden>
         <div class="wrapper">
-        <h2 class="section-header tc mt3 mb5">Thanks for letting us know</h2>
+        <h2 class="section-header tc mt3 mb5">We’re no longer accepting RSVP’s</h2>
           <p class="section-copy tc-ns mb5">
-            If you have any queries or change in circumstance feel free to
-            contact us at
-            <a href="mailto:help@donnakevin.wedding"
-               class="link">help@donnakevin.wedding</a> or however you normally
-             communicate with us.
+            The wedding has already happened. Sorry SEO bots, you're too late.
           </p>
         </div>
       </div>
@@ -563,8 +559,8 @@ svgCore.library.add(icons.fas)
             and, if you can attend, please read the
             <a href="#coronavirus" class="link">coronavirus information</a>.
           </p>
-          <form method="post"
-                action="https://naypo2lfqe.execute-api.eu-west-1.amazonaws.com/Prod/rsvp/"
+          <form method="get"
+                action="#rsvp-over"
                 class="form mt4"
                 id="rsvp-form">
             <fieldset class="form__fieldset">

@@ -197,17 +197,17 @@ html {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.pane--rsvp-thanks,
-.pane--rsvp-thanks:target ~ .pane--rsvp,
-.pane--gifts-thanks,
-.pane--gifts-thanks:target ~ .pane--gifts,
+.pane--rsvp-over,
+.pane--rsvp-over:target ~ .pane--rsvp,
+.pane--gifts-over,
+.pane--gifts-over:target ~ .pane--gifts,
 .gifts-form,
 .gifts-form-target:target .gifts-blurb {
   display: none;
 }
 
-.pane--rsvp-thanks:target,
-.pane--gifts-thanks:target,
+.pane--rsvp-over:target,
+.pane--gifts-over:target,
 .gifts-form-target:target .gifts-form {
   display: block;
 }
