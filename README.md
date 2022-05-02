@@ -1,6 +1,6 @@
 # donnakevin.wedding
 
-[![Build Status](https://travis-ci.org/kevindew/donnakevin.wedding.svg?branch=master)](https://travis-ci.org/kevindew/donnakevin.wedding)
+[![example workflow](https://github.com/kevindew/donnakevin.wedding/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kevindew/donnakevin.wedding/actions?query=branch%3Amain)
 
 Wedding website for the marriage of
 [Donna Carter](https://github.com/donnacarter) and
