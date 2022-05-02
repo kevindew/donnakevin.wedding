@@ -16,6 +16,11 @@ jobs:
         run: |
           npm ci
           npm test
+      - name: Test Gift function
+        working-directory: lambda/gift
+        run: |
+          npm ci
+          npm test
       - run: npm ci
       - run: npm run lint
       - run: npm run build
